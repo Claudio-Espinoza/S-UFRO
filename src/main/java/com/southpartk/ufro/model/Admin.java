@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="administrador")
-public class Administrador {
+@Table(name="admin")
+public class Admin {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
     @Column(length=11, nullable=false, unique = true)
@@ -14,16 +14,16 @@ public class Administrador {
     private String password;
 
     @OneToMany()
-    private List<Usuario> usuarios;
+    private List<User> user;
 
     //-|Constructor|--------------------------------------------------------------------------------------------------//
-    public Administrador() {
+    public Admin() {
     }
 
-    public Administrador(String rut, String password, List<Usuario> usuarios) {
+    public Admin(String rut, String password, List<User> user) {
         this.rut = rut;
         this.password = password;
-        this.usuarios = usuarios;
+        this.user = user;
     }
 
     //-|Getter y Setter|----------------------------------------------------------------------------------------------//
@@ -43,12 +43,12 @@ public class Administrador {
         this.password = password;
     }
 
-    public List<Usuario> getUsuarios() {
-        return usuarios;
+    public List<User> getUser() {
+        return user;
     }
 
-    public void setUsuarios(List<Usuario> usuarios) {
-        this.usuarios = usuarios;
+    public void setUser(List<User> user) {
+        this.user = user;
     }
 
     //-|toString|-----------------------------------------------------------------------------------------------------//
@@ -57,7 +57,7 @@ public class Administrador {
         return "Administrador{" +
                 "rut='" + rut + '\'' +
                 ", password='" + password + '\'' +
-                ", ordenes=" + usuarios +
+                ", User=" + user +
                 '}';
     }
 }

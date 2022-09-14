@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="usuario")
-public class Usuario {
+public class User {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
     @Column(length=45, nullable=false, unique = true)
@@ -15,13 +15,13 @@ public class Usuario {
     private String password;
 
     //-|Construcor|---------------------------------------------------------------------------------------------------//
-    public Usuario(String name, String nickName, String password) {
+    public User(String name, String nickName, String password) {
         this.name = name;
         this.nickName = nickName;
         this.password = password;
     }
 
-    public Usuario() {
+    public User() {
     }
 
     //-|Getter y Setter|----------------------------------------------------------------------------------------------//
