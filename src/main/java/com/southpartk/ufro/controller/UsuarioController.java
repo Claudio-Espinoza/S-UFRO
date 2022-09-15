@@ -6,13 +6,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("login")
+@RequestMapping("index")
 public class UsuarioController {
 
     @GetMapping("")
-    public String show(Model model){
-        System.out.println("Login");
+    public String initian(Model model){
+        System.out.println("Inicio"); //Esto lo pongo para asegurar no mas
         return "login/Initian";
+    }
+
+    @GetMapping("login")
+    public String logIn(Model model){
+        System.out.println("Login");
+        return "login/Log-in";
     }
 
 
