@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Iniciar sesión</title>
+  <!-- el booststrap 5 -->
+
+  <link th:href="@{css/style.css}" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!-- aqui las imagenes dimensionadas de acuerdo a la interfaz de mi pantalla, aun estoy viendo como hacer que las imagenes sean responsivas porque no son lo mismo que trabajar con texto xd -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <a th:href="@{Log-in.html}" >
+          <img th:src="@{images/UserLoginLabel.png}" class="user_login--boton" >
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <a th:href="@{Log-in.html}" >
+          <img th:src="@{images/adminLoginLabel.png}" class="admin_login--boton">
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
