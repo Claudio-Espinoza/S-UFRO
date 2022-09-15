@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UsuarioController {
 
     @GetMapping("")
-    public String initian(Model model){
+    public String initian(){
         System.out.println("Inicio"); //Esto lo pongo para asegurar no mas
         return "login/Initian";
     }

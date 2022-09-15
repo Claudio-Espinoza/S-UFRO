@@ -2,12 +2,11 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link th:href="@{css/style.css}" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Iniciar sesion</title>
 </head>
-<body>
+<body class="body">
 <div class="container">
     <div class="row">
         <div>
@@ -17,7 +16,7 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <h2>Log-In</h2>
-            <form class="form-horizontal" th:action="@{-}" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="name">Nombre:</label>
