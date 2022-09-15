@@ -1,0 +1,22 @@
+body{
+    background: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+.user{
+    position: relative;
+    left: 33rem;
+    top: 10.5rem;
+}
+.admin{
+    position: relative;
+    left: 35rem;
+    top: 14.5rem;
+}
+.textField{
+    position: relative;
+    left: 33rem;
+    top: 10.5rem;
+}
