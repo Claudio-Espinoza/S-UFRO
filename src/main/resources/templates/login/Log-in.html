@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <title>Iniciar sesion</title>
+    <meta charset="utf-8">
+    <link th:href="@{css/style_login.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{css/bootstrap.css}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Iniciar sesion</title>
+
 </head>
-<body class="body">
+<body class="body_lobby--background">
 <div class="container">
     <div class="row">
         <div>
@@ -16,7 +19,7 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <h2>Log-In</h2>
-            <form class="form-horizontal" th:action="@{/index/save}" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="name">Nombre:</label>
@@ -24,16 +27,6 @@
                         <input type="text" class="form-control" id="name" name="name" autocomplete="off" required>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="control-label col-sm-2" for="name">nickName:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nickName" name="nickName" autocomplete="off" required>
-                    </div>
-                </div>
-
-
-
 
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="password">contraseña:</label>
