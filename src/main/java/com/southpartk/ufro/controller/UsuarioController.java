@@ -16,7 +16,7 @@ public class UsuarioController {
     }
 
     @GetMapping("login")
-    public String logIn(Model model){
+    public String logIn(){
         System.out.println("Login");
         return "login/Log-in";
     }
