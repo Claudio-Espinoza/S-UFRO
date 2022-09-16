@@ -31,9 +31,10 @@ public class UsuarioController {
 
     @PostMapping("/save")
     public String save(User user){
-        LOGGER.info("Usuario:  " + user);
+        LOGGER.info("Usuario:  " + user); //Con esto podemos ver los cambios hechoes en labase de datos, se vera por la consola Uwu
         userService.save(user);
         return "redirect:/index"; //Esto hay que cambiarlo cuando el juego este listo Owo
+                                  //En teoria deberia llevarnos al diseño de personaje
     }
 
 
