@@ -26,7 +26,7 @@ public class UserController {
     @GetMapping("login")
     public String logIn(){
         System.out.println("Login");
-        return "login/Log-In";
+        return "login/Login";
     }
 
     @PostMapping("/save")
