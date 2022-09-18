@@ -1,6 +1,7 @@
 package com.southpartk.ufro.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="usuario")
@@ -10,17 +11,12 @@ public class User {
     @Column(length=45, nullable=false, unique = true)
     private String name;
     @Column(length=45)
-    private String nickName;
-    @Column(length=45)
     private String password;
 
-    //-|Construcor|---------------------------------------------------------------------------------------------------//
-    public User(String name, String nickName, String password) {
-        this.name = name;
-        this.nickName = nickName;
-        this.password = password;
-    }
+    @OneToOne(mappedBy="user")
+    private PersonajePrincipal personaje_principal;
 
+    //-|Construcor|---------------------------------------------------------------------------------------------------//
     public User() {
     }
 
@@ -31,14 +27,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
     }
 
     public String getPassword() {
@@ -54,7 +42,6 @@ public class User {
     public String toString() {
         return "Usuario{" +
                 "name='" + name + '\'' +
-                ", nickName='" + nickName + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
