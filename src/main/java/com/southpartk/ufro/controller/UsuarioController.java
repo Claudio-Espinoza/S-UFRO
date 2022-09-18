@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.logging.Logger;
 
 @Controller
-@RequestMapping("index")
+@RequestMapping("/")
 public class UsuarioController {
     @Autowired
     private UserService userService;
@@ -20,20 +20,20 @@ public class UsuarioController {
     @GetMapping("")
     public String initian(){
         System.out.println("Inicio"); //Esto lo pongo para asegurar no mas
-        return "login/Initian";
+        return "credentials/Initian";
     }
 
     @GetMapping("login")
     public String logIn(){
         System.out.println("Login");
-        return "login/Log-In";
+        return "credentials/Login";
     }
 
     @PostMapping("/save")
     public String save(User user){
         LOGGER.info("Usuario:  " + user); //Con esto podemos ver los cambios hechoes en labase de datos, se vera por la consola Uwu
         userService.save(user);
-        return "redirect:/index"; //Esto hay que cambiarlo cuando el juego este listo Owo
+        return "redirect:/"; //Esto hay que cambiarlo cuando el juego este listo Owo
                                   //En teoria deberia llevarnos al diseño de personaje
     }
 
