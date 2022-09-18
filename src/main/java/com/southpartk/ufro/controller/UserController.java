@@ -12,10 +12,10 @@ import java.util.logging.Logger;
 
 @Controller
 @RequestMapping("/")
-public class UsuarioController {
+public class UserController {
     @Autowired
     private UserService userService;
-    private final Logger LOGGER = Logger.getLogger(String.valueOf(UsuarioController.class));
+    private final Logger LOGGER = Logger.getLogger(String.valueOf(UserController.class));
 
     @GetMapping("")
     public String initian(){
