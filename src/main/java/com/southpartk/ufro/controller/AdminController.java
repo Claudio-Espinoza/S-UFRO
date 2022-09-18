@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.logging.Logger;
 
 @Controller
-@RequestMapping("admin")
+@RequestMapping("")
 public class AdminController {
 
     @Autowired
