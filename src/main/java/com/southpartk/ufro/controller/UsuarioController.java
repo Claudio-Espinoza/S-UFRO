@@ -29,7 +29,7 @@ public class UsuarioController {
         return "credentials/Login";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/saveUser")
     public String save(User user){
         LOGGER.info("Usuario:  " + user); //Con esto podemos ver los cambios hechoes en labase de datos, se vera por la consola Uwu
         userService.save(user);
