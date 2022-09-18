@@ -24,10 +24,4 @@ public class AdminController {
             System.out.println("Ver Atributos");
         return "login_admin";
     };
-
-
-
-
-
-
 }
