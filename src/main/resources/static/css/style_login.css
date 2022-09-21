@@ -1,7 +1,22 @@
 .body_login--background{
-    background-image: url('../images/backgroundLogin.jpg');
+    background-image: url('../images/backgroundLogin.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
+}
+
+#cuadro{
+    width: 650px;
+    height: auto;
+    background: #090909;
+    color: #ffffff;
+    margin: auto;
+    margin-top: 120px;
+    padding: 5px 30px 5px;
+    border-top: 3px solid #002fff;
+    border-right: 3px solid #001aaf;
+    border-left: 3px solid #0000f5;
+    border-bottom: 3px solid #0000f5;
+    border-radius: 5px;
 }

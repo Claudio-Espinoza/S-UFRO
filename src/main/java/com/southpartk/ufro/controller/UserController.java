@@ -20,13 +20,13 @@ public class UserController {
     @GetMapping("")
     public String initian(){
         System.out.println("Inicio"); //Esto lo pongo para asegurar no mas
-        return "credentials/Initian";
+        return "credentials/InitianPage";
     }
 
-    @GetMapping("login")
+    @GetMapping("loginCredentials")
     public String logIn(){
         System.out.println("Login");
-        return "credentials/Login";
+        return "credentials/LoginCredentials";
     }
 
     @PostMapping("/saveUser")
@@ -36,6 +36,8 @@ public class UserController {
         return "redirect:/"; //Esto hay que cambiarlo cuando el juego este listo Owo
                                   //En teoria deberia llevarnos al diseño de personaje
     }
+
+
 
 
 }
