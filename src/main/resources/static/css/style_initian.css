@@ -14,12 +14,7 @@
 .admin_login--boton{
     position: absolute; /*Hace que un elemento se coloque respecto a su contenedor posicionado mas cercano, si no encuentra ningún contenedor cercano, el elemento se colocara respecto al viewport.*/
                         /*El problema es que si no tenemos contenedor y doblamos belico, la pagina se va a roma*/
-    left: 44.3%;  /*Con los porcentaje son pixeles adpatable y no importa el tamaño de la pantalla UwU*/
+    left: 44.3%;        /*Con los porcentaje son pixeles adpatable y no importa el tamaño de la pantalla UwU*/
     top: 46.5%;
     width: 10%;
-}
-.textField{
-    position: relative;
-    left: 33rem;
-    top: 10.5rem;
 }

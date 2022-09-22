@@ -22,10 +22,16 @@
 
 .body_login--button{
     position: fixed;
-    top: 68%;
-    left: 42%;
-    width: 13%;
+    top: 67%;
+    left: 42.5%;
+    width: 12%;
 }
-.borrar{
-    opacity: 0;
+
+#body_login--buttonRotation{
+    rotate: 354deg;
 }
+
+.form-control{
+    background-color: transparent;
+}
+
