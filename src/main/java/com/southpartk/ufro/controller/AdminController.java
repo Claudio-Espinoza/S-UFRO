@@ -1,6 +1,5 @@
 package com.southpartk.ufro.controller;
 
-import com.southpartk.ufro.service.AdminService;
 import com.southpartk.ufro.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,10 +17,11 @@ public class AdminController {
     private UserService UserService;
     private final Logger LOGGER = Logger.getLogger(String.valueOf(AdminController.class));
 
-    @GetMapping("/admin")
+    @GetMapping("/AdminChattelShow")
     public String showAdmin(Model model) {
-            model.addAttribute("Atributos", UserService.findByAll());
-            System.out.println("Ver Atributos");
-        return "login_admin";
+            model.addAttribute("user", UserService.findByAll());
+            System.out.println("Ver Usuario");
+        return "admin/ControlUser";
     };
+
 }

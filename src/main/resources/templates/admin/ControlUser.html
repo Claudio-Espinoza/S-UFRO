@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">">
+<head>
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <meta charset="UTF-8">
+    <title>Admin(User)</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>Usuarios</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">contraseña</th>
+        </tr>
+        </thead>
+        <tbody>    <!--| variable :${Model modelo: UserService} |-->
+        <tr th:each="users:${user}">
+            <td th:text="${users.name}"></td>
+            <td th:text="${users.password}"></td>
+            <td><a  class="btn btn-danger" href="">Eliminar</a> </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

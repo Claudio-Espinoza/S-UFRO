@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<!-- Se supone que asi podriamos elegir que entidades vera el administrador -->
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary" th:href="@{/AdminChattelShow}">Control de Usuario</button>
+    <!-- Aun no se crea :( -->
+    <button type="button" class="btn btn-primary" >Control de Personaje</button>
+</div>
+</body>
+</html>
