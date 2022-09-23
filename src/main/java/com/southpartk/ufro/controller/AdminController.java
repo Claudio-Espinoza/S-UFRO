@@ -30,6 +30,13 @@ public class AdminController {
         return "admin/ControlUser";
     }
 
+    //-|Ver el menu del administrador|-//
+    @GetMapping("/adminShowMenu")
+    public String showMenuAdmin(Model model) {
+        System.out.println("Ver Menu");
+        return "admin/Menu";
+    }
+
     //-|Ver el panel validaor del administrador|-//
     @GetMapping("/credentialsAdmin")
     public String credentialsAdmin(Model model) {
@@ -41,7 +48,7 @@ public class AdminController {
     @PostMapping("/validationAdmin")
     public String validationAdmin(String rut) {
         if(adminService.existsById(rut)){
-            return  "redirect:/adminChattelShow";
+            return  "redirect:/adminShowMenu";
         } else {
             return "redirect:/credentialsAdmin";
         }

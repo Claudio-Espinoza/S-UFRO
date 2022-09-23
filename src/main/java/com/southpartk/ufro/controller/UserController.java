@@ -5,6 +5,7 @@ import com.southpartk.ufro.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -36,4 +37,11 @@ public class UserController {
         return "redirect:/"; //Esto hay que cambiarlo cuando el juego este listo Owo
                                   //En teoria deberia llevarnos al diseño de personaje
     }
+
+    @GetMapping("/deleteUser/{nombre}")
+    public String deleteUser(@PathVariable String nombre){
+        userService.deleteUser(nombre);
+        return "redirect:/adminChattelShow";
+    }
+
 }

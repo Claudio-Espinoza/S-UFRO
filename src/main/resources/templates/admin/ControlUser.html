@@ -20,7 +20,7 @@
         <tr th:each="users:${user}">
             <td th:text="${users.name}"></td>
             <td th:text="${users.password}"></td>
-            <td><a  class="btn btn-danger" href="">Eliminar</a> </td>
+            <td><a  class="btn btn-danger" th:href="@{/deleteUser/{nombre}(nombre=${users.name})}">Eliminar</a> </td>
         </tr>
         </tbody>
     </table>

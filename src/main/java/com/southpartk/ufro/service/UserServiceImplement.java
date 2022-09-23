@@ -16,14 +16,13 @@ public class UserServiceImplement implements UserService{
     public User save(User user) {
         return userRepository.save(user);
     }
-
-    @Override
-    public Optional<User> get(String id) {
-        return userRepository.findById(id);
-    }
-
     @Override
     public List<User> findByAll(){
         return userRepository.findAll();
+    }
+
+    @Override
+        public void deleteUser(String nombre) {
+        userRepository.deleteById(nombre);
     }
 }

@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
+    //-|Guardar|-//
     User save(User user);
-    //-|Ver y validar el dato|-//
-    Optional<User> get(String id);
-    //-|Actualizar|------------//
+    //-|Ver|-//
     List<User> findByAll();
 
+    void deleteUser(String nombre);
 }
