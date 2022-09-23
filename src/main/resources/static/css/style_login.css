@@ -35,3 +35,15 @@
     background-color: transparent;
 }
 
+.sign
+{
+    position: fixed;
+    top: 2%;
+    left: 5%;
+}
+button
+{
+    background-color: transparent;
+    border: none;
+}
+

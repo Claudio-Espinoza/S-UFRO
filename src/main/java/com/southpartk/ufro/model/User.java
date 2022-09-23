@@ -13,9 +13,6 @@ public class User {
     @Column(length=45)
     private String password;
 
-    @OneToOne(mappedBy="user")
-    private PersonajePrincipal personaje_principal;
-
     //-|Construcor|---------------------------------------------------------------------------------------------------//
     public User() {
     }
