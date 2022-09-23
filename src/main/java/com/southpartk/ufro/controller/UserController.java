@@ -36,8 +36,4 @@ public class UserController {
         return "redirect:/"; //Esto hay que cambiarlo cuando el juego este listo Owo
                                   //En teoria deberia llevarnos al diseño de personaje
     }
-
-
-
-
 }

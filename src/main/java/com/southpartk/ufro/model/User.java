@@ -8,7 +8,7 @@ import java.util.List;
 public class User {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
-    @Column(length=45, nullable=false, unique = true)
+    @Column(length=45, nullable=false, unique = true )
     private String name;
     @Column(length=45)
     private String password;

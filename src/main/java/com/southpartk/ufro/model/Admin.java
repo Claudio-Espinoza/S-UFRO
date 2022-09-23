@@ -20,10 +20,9 @@ public class Admin {
     public Admin() {
     }
 
-    public Admin(String rut, String password, List<User> user) {
+    public Admin(String rut, String password) {
         this.rut = rut;
         this.password = password;
-        this.user = user;
     }
 
     //-|Getter y Setter|----------------------------------------------------------------------------------------------//
