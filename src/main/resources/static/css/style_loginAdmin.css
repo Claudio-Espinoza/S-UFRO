@@ -1,6 +1,6 @@
 .body_loginAdmin--background
 {
-    background-image: url('../images/entradaAdminBackground.jpg');
+    background-image: url('../images/entradaAdminBackground.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -9,23 +9,38 @@
 
 .body_loginAdmin--button
 {
+    position: fixed;
+    top: 46.5%;
+    left: 42%;
+    width: 15%;
+    rotate: 357deg;
+    display: inline-block;
+    padding: 16px 24px;
+    overflow: hidden;
+    transition: 0.1s;
+}
+.body_loginAdmin--button:hover
+{
+    box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
+    transition-delay: 0.1s;
+}
+#admin{
+    position: fixed;
+    top:26%;
+    left:45%;
+    width:16%;
+    rotate: 356deg;
 
 }
-#admin
-{
-    position: fixed;
-    top: 20%;
-    left: 30%;
-}
-#pass
-{
-    position: fixed;
-    top: 30%;
-    left: 30%;
-}
 
-.form_control
-{
+#pass{
+    position: fixed;
+    top:32.5%;
+    left:45%;
+    width:16%;
+    rotate: 356deg;
+}
+.form-control{
     background-color: transparent;
 }
 
@@ -33,4 +48,10 @@ button
 {
     background-color: transparent;
     border: none;
+}
+.sign
+{
+    position: fixed;
+    top: 2%;
+    left: 5%;
 }
