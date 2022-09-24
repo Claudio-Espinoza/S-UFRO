@@ -1,10 +1,8 @@
 package com.southpartk.ufro.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name="admin")
 public class Admin {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
@@ -21,24 +19,6 @@ public class Admin {
         this.rut = rut;
         this.password = password;
     }
-
-    //-|Getter y Setter|----------------------------------------------------------------------------------------------//
-    public String getRut() {
-        return rut;
-    }
-
-    public void setRut(String rut) {
-        this.rut = rut;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     //-|toString|-----------------------------------------------------------------------------------------------------//
     @Override
     public String toString() {

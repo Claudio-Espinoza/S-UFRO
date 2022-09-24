@@ -1,6 +1,5 @@
 package com.southpartk.ufro.controller;
 
-import com.southpartk.ufro.model.User;
 import com.southpartk.ufro.repository.UserRepository;
 import com.southpartk.ufro.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("")
 public class AdminController {
-
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -29,14 +27,14 @@ public class AdminController {
 
     //-|Ver el menu del administrador|-//
     @GetMapping("/adminShowMenu")
-    public String showMenuAdmin(Model model) {
+    public String showMenuAdmin() {
         System.out.println("Ver Menu");
         return "admin/Menu";
     }
 
     //-|Ver el panel validaor del administrador|-//
     @GetMapping("/credentialsAdmin")
-    public String credentialsAdmin(Model model) {
+    public String credentialsAdmin() {
         System.out.println("Ver Login Admin");
         return "credentials/LoginCredentialsAdmin";
     }

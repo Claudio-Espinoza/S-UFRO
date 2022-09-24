@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 @Controller
 @RequestMapping("/")
 public class UserController {
-    @Autowired
+    @Autowired //Esto no se puede borrar, se rompe xd
     private UserRepository userRepository;
     private final Logger LOGGER = Logger.getLogger(String.valueOf(UserController.class));
 

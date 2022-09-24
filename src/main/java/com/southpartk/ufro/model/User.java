@@ -1,10 +1,8 @@
 package com.southpartk.ufro.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name="usuario")
 public class User {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
@@ -28,10 +26,6 @@ public class User {
 
     public String getPassword() {
         return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     //-|toString|-----------------------------------------------------------------------------------------------------//
