@@ -1,8 +1,8 @@
 package com.southpartk.ufro.controller;
 
-import com.southpartk.ufro.model.Admin;
+import com.southpartk.ufro.model.User;
+import com.southpartk.ufro.repository.UserRepository;
 import com.southpartk.ufro.service.AdminService;
-import com.southpartk.ufro.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,22 +10,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.logging.Logger;
-
 @Controller
 @RequestMapping("")
 public class AdminController {
 
     @Autowired
-    private UserService userService;
-
+    private UserRepository userRepository;
     @Autowired
     private AdminService adminService;
 
     //-|Ver el panel principal del administrador|-//
     @GetMapping("/adminChattelShow")
     public String showAdmin(Model model) {
-            model.addAttribute("user", userService.findByAll());
+            model.addAttribute("user", userRepository.findAll());
             System.out.println("Ver Usuario");
         return "admin/ControlUser";
     }

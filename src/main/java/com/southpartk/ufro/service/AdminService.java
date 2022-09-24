@@ -1,12 +1,16 @@
 package com.southpartk.ufro.service;
 
-import com.southpartk.ufro.model.Admin;
-import com.sun.xml.bind.v2.model.core.ID;
+import com.southpartk.ufro.repository.AdminRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+@Service
+public class AdminService {
+    @Autowired
+    AdminRepository adminRepository;
 
-public interface AdminService {
-    boolean existsById(String rut);
+    public boolean existsById(String rut) {
+        return adminRepository.existsById(rut);
+    }
 
 }

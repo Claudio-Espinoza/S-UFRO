@@ -13,9 +13,6 @@ public class Admin {
     @Column(length=45)
     private String password;
 
-    @OneToMany()
-    private List<User> user;
-
     //-|Constructor|--------------------------------------------------------------------------------------------------//
     public Admin() {
     }
@@ -42,21 +39,12 @@ public class Admin {
         this.password = password;
     }
 
-    public List<User> getUser() {
-        return user;
-    }
-
-    public void setUser(List<User> user) {
-        this.user = user;
-    }
-
     //-|toString|-----------------------------------------------------------------------------------------------------//
     @Override
     public String toString() {
         return "Administrador{" +
                 "rut='" + rut + '\'' +
                 ", password='" + password + '\'' +
-                ", User=" + user +
                 '}';
     }
 }
