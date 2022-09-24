@@ -1,3 +1,34 @@
+.body_loginAdmin--background
+{
+    background-image: url('../images/entradaAdminBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.body_loginAdmin--button
+{
+
+}
+#admin
+{
+    position: fixed;
+    top: 20%;
+    left: 30%;
+}
+#pass
+{
+    position: fixed;
+    top: 30%;
+    left: 30%;
+}
+
+.form_control
+{
+    background-color: transparent;
+}
+
 button
 {
     background-color: transparent;
