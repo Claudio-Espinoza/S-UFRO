@@ -1,5 +1,5 @@
 .body_login--background{
-    background-image: url('../images/panelAutentification.png');
+    background-image: url('../images/backgroundLogin.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -8,27 +8,30 @@
 
 #user{
     position: fixed;
-    top:37%;
-    left:42%;
-    width:33%;
+    top:25.5%;
+    left:45%;
+    width:16%;
+    rotate: 356deg;
+
 }
 
 #pass{
     position: fixed;
-    top:50%;
-    left:42%;
-    width:33%;
+    top:32%;
+    left:45%;
+    width:16%;
+    rotate: 356deg;
 }
 
 .body_login--button{
     position: fixed;
-    top: 67%;
-    left: 42.5%;
+    top: 48.5%;
+    left: 43%;
     width: 12%;
 }
 
 #body_login--buttonRotation{
-    rotate: 354deg;
+    rotate: 356deg;
 }
 
 .form-control{
