@@ -1,0 +1,49 @@
+.body_menu--background
+{
+    background-image: url('../images/backgroundMenu.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+.admin_menu--usersButton
+{
+    position: fixed;
+    top: 30%;
+    left: 38%;
+    width: 15%;
+    background-color: #0056b3;
+    padding: 4px 8px;
+    overflow: hidden;
+    transition: 0.1s;
+}
+.admin_menu--usersButton:hover
+{
+    background-color: rebeccapurple;
+    box-shadow: 0 0 10px purple, 0 0 40px purple, 0 0 80px purple;
+    transition-delay: 0.1s;
+}
+.admin_menu--avatarsButton
+{
+    position: fixed;
+    top: 30%;
+    left: 57%;
+    width: 16.5%;
+    background-color: #0056b3;
+    padding: 4px 8px;
+    overflow: hidden;
+    transition: 0.1s;
+}
+.admin_menu--avatarsButton:hover
+{
+    background-color: rebeccapurple;
+    box-shadow: 0 0 10px purple, 0 0 40px purple, 0 0 80px purple;
+    transition-delay: 0.1s;
+}
+.sign
+{
+    position: fixed;
+    top: 5%;
+    left: 2%;
+    width: 15%;
+}

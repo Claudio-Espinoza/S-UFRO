@@ -2,14 +2,25 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/style_adminMenu.css}">
     <meta charset="UTF-8">
     <title>Menu</title>
 </head>
-<body>
+<body class="body_menu--background">
+    <div>
+        <audio th:src="@{sounds/adminoficeMusic.mp3}" autoplay loop></audio>
+    </div>
+    <a th:href="@{/}"  class="sign">
+        <img th:src="@{images/exitCartelSign.png}">
+    </a>
 <!-- Se supone que asi podriamos elegir que entidades vera el administrador -->
     <div class="btn-group" role="group" aria-label="Basic example">
-        <a type="button" class="btn btn-primary" th:href="@{/adminChattelShow}">Control de Usuario</a>
-        <a type="button" class="btn btn-primary" >Control de Personaje</a>
+        <a th:href="@{/adminChattelShow}">
+            <img th:src="@{images/usersControlText.png}" class="admin_menu--usersButton">
+        </a>
+        <a>
+            <img th:src="@{images/avatarsControlText.png}" class="admin_menu--avatarsButton">
+        </a>
     </div>
 </body>
 </html>
