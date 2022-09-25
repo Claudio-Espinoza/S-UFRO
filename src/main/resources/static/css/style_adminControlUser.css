@@ -1,0 +1,21 @@
+.body_controlUser--background
+{
+    background-image: url('../images/backgroundUserControl.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+img.rigth {
+    float: right;
+    margin-top: 2%;
+    width:20%;
+    margin-left: 6%;
+}
+.sign
+{
+    position: fixed;
+    top: 5%;
+    left: 2%;
+    width: 15%;
+}

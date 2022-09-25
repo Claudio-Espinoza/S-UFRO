@@ -2,28 +2,41 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/style_adminControlUser.css}">
     <meta charset="UTF-8">
     <title>Admin(User)</title>
 </head>
-<body>
-
+<body class="body_controlUser--background">
 <div class="container">
-    <h2>Usuarios</h2>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">contraseña</th>
-        </tr>
-        </thead>
-        <tbody>    <!--| variable :${Model modelo: UserService} |-->
-        <tr th:each="users:${user}">
-            <td th:text="${users.name}"></td>
-            <td th:text="${users.password}"></td>
-            <td><a  class="btn btn-danger" th:href="@{/deleteUser/{nombre}(nombre=${users.name})}">Eliminar</a> </td>
-        </tr>
-        </tbody>
-    </table>
+    <div>
+        <a th:href="@{/adminShowMenu}"  class="sign">
+            <img th:src="@{images/backSign.png}">
+        </a><!-- volver al admin -->
+    </div>
+     <tr th:each="users:${user}">
+         <p class="">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">User: <span th:text="${users.name}"></span>
+                                <img th:src="@{images/avatarToken.png}" class="rigth"></h5>
+                            <p class="card-text">Password: <span th:text="${users.password}"></span> </p>
+                            <p>Score: aqui va un score xdd</p>
+                            <p>info adicional: aqui va info adicional xd</p>
+                            <a href="#" class="btn btn-danger" th:href="@{/deleteUser/{nombre}(nombre=${users.name})}">Delete</a>
+                            <a href="" class="btn btn-secondary">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </p>
+     </tr>
+        <!--<td>
+        <td th:text="${users.name}"></td>
+        <td th:text="${users.password}"></td>
+        <a  class="btn btn-danger" th:href="@{/deleteUser/{nombre}(nombre=${users.name})}">Eliminar</a> </td>-->
+        <!--| variable :${Model modelo: UserService} |-->
 </div>
 </body>
 </html>
