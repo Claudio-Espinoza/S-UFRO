@@ -25,13 +25,19 @@
 
 .body_login--button{
     position: fixed;
-    top: 48.5%;
-    left: 43%;
-    width: 12%;
+    top: 46.5%;
+    left: 42%;
+    width: 15%;
+    rotate: 357deg;
+    display: inline-block;
+    padding: 16px 24px;
+    overflow: hidden;
+    transition: 0.1s;
 }
-
-#body_login--buttonRotation{
-    rotate: 356deg;
+.body_login--button:hover
+{
+    box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
+    transition-delay: 0.1s;
 }
 
 .form-control{
