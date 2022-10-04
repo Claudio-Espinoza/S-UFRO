@@ -8,8 +8,21 @@ public class PersonajePrincipal {
     @Id
     @Column(length=45, nullable=false, unique = true )
     private String name;
+    private String colorHair;
+    private String typeHair;
 
-    private String color;
+    private String typeTop;
+
+    private String colorTop;
+
+    private String typeButton;
+
+    private String colorButton;
+
+    private String typeShoe;
+
+    private String colorShoe;
+
     //-|Construcor|---------------------------------------------------------------------------------------------------//
     public PersonajePrincipal() {
     }
@@ -22,14 +35,69 @@ public class PersonajePrincipal {
     public void setName(String name) {
         this.name = name;
     }
-    public String getColor() {
-        return color;
+
+    public String getColorHair() {
+        return colorHair;
     }
-    public void setColor(String color) {
-        this.color = color;
+    public void setColorHair(String colorHair) {
+        this.colorHair = colorHair;
+    }
+    public String getTypeHair() {
+        return typeHair;
+    }
+    public void setTypeHair(String typeHair) {
+        this.typeHair = typeHair;
     }
 
-    //-|toString|-----------------------------------------------------------------------------------------------------//
+    public String getTypeTop() {
+        return typeTop;
+    }
+
+    public void setTypeTop(String typeTop) {
+        this.typeTop = typeTop;
+    }
+
+    public String getColorTop() {
+        return colorTop;
+    }
+
+    public void setColorTop(String colorTop) {
+        this.colorTop = colorTop;
+    }
+
+    public String getTypeButton() {
+        return typeButton;
+    }
+
+    public void setTypeButton(String typeButton) {
+        this.typeButton = typeButton;
+    }
+
+    public String getColorButton() {
+        return colorButton;
+    }
+
+    public void setColorButton(String colorButton) {
+        this.colorButton = colorButton;
+    }
+
+    public String getTypeShoe() {
+        return typeShoe;
+    }
+
+    public void setTypeShoe(String typeShoe) {
+        this.typeShoe = typeShoe;
+    }
+
+    public String getColorShoe() {
+        return colorShoe;
+    }
+
+    public void setColorShoe(String colorShoe) {
+        this.colorShoe = colorShoe;
+    }
+
+//-|toString|-----------------------------------------------------------------------------------------------------//
 
 
     @Override

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div class="container__optionBox ">
+    <h1>
+        Diseño de personaje
+    </h1>
+    <form class="form" th:action="@{/savePersonaje}" method="post" enctype="multipart/form-data">
+
+        <div class="form__container" id="names">
+
+            <div class="form__container--name">
+                <h2>Nombre de Personaje</h2>
+                <input type="text" class="input name" id="name" name="name" autocomplete="off" required>
+            </div>
+
+            <div class="form__container--skin">
+                <h2>Piel</h2>
+                <input type="radio" class="input name" id="tipo1" name="skin" value="Blanco" autocomplete="off"
+                       required>
+                <input type="radio" class="input name" id="tipo2" name="skin" value="humilde" autocomplete="off"
+                       required>
+                <input type="radio" class="input name" id="tipo3" name="skin" value="Indigena" autocomplete="off"
+                       required>
+                <input type="radio" class="input name" id="tipo4" name="skin" value="Haitiano" autocomplete="off"
+                       required>
+            </div>
+
+            <div class="form__container--hair">
+                <H2>Pelo</H2>
+                <div class="form__container--typehair">
+                    <h3>Tipo</h3>
+                    <input type="radio" class="input typehair" id="tipo5" name="typeHair" value="Otaku"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typehair" id="tipo6" name="typeHair" value="Largo"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typehair" id="tipo7" name="typeHair" value="Corto"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typehair" id="tipo8" name="typeHair" value="Calvo"
+                           autocomplete="off" required>
+                </div>
+
+                <div class="form__container--colorhair">
+                    <h3>Color</h3>
+                    <input type="radio" class="input colorhair" id="color1" name="colorHair" value="Oxido"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colorhair" id="color2" name="colorHair" value="Castaño"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colorhair" id="color3" name="colorHair" value="Rubio"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colorhair" id="color4" name="colorHair" value="Moreno"
+                           autocomplete="off" required>
+                </div>
+            </div>
+
+            <div class="form__container--clothestop">
+                <H2>Top Clothes</H2>
+                <div class="form__container--typetop">
+                    <h3>Tipo</h3>
+                    <input type="radio" class="input typetop" id="tipo9" name="typeTop" value="Camisa"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typetop" id="tipo10" name="typeTop" value="Polera"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typetop" id="tipo11" name="typeTop" value="Desnudo"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typetop" id="tipo12" name="typeTop" value="Poleron"
+                           autocomplete="off" required>
+                </div>
+
+                <div class="form__container--colortop">
+                    <h3>Color</h3>
+                    <input type="radio" class="input colortop" id="color10" name="colorTop" value="Rojo"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colortop" id="color11" name="colorTop" value="Aulz"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colortop" id="color12" name="colorTop" value="Amarillo"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colortop" id="color13" name="colorTop" value="Negro"
+                           autocomplete="off" required>
+                </div>
+            </div>
+
+            <div class="form__container--clothesbutton">
+                <H2>Button Clothes</H2>
+                <div class="form__container--typebutton">
+                    <h3>Tipo</h3>
+                    <input type="radio" class="input typebutton" id="tipo13" name="typeButton" value="Short"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typebutton" id="tipo14" name="typeButton" value="Pantalon"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typebutton" id="tipo15" name="typeButton" value="Tanga"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typebutton" id="tipo16" name="typeButton" value="Boxer"
+                           autocomplete="off" required>
+                </div>
+
+                <div class="form__container--colorbutton">
+                    <h3>Color</h3>
+                    <input type="radio" class="input colorbutton" id="color14" name="colorButton" value="Rojo"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colorbutton" id="color15" name="colorButton" value="Aulz"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colorbutton" id="color16" name="colorButton" value="Amarillo"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colorbutton" id="color17" name="colorButton" value="Negro"
+                           autocomplete="off" required>
+                </div>
+            </div>
+
+            <div class="form__container--shoe">
+                <H2>Shoe</H2>
+                <div class="form__container--typeshoe">
+                    <h3>Tipo</h3>
+                    <input type="radio" class="input typeshoe" id="tipo17" name="typeShoe" value="Short"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typeshoe" id="tipo18" name="typeShoe" value="Pantalon"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typeshoe" id="tipo19" name="typeShoe" value="Tanga"
+                           autocomplete="off" required>
+                    <input type="radio" class="input typeshoe" id="tipo20" name="typeShoe" value="Boxer"
+                           autocomplete="off" required>
+                </div>
+
+                <div class="form__container--colorbutton">
+                    <h3>Color</h3>
+                    <input type="radio" class="input colorbutton" id="color18" name="colorShoe" value="Rojo"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colorbutton" id="color19" name="colorShoe" value="Aulz"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colorbutton" id="color20" name="colorShoe" value="Amarillo"
+                           autocomplete="off" required>
+                    <input type="radio" class="input colorbutton" id="color21" name="colorShoe" value="Negro"
+                           autocomplete="off" required>
+                </div>
+            </div>
+        </div>
+        <div class="imgBox">
+            <button type="submit">
+                a
+            </button>
+
+        </div>
+
+    </form>
+</div>
+
+<div class="container__character">
+    a
+</div>
+
+</body>
+
+</html>

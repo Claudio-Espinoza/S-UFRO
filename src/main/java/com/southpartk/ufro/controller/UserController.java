@@ -33,7 +33,7 @@ public class UserController {
     @GetMapping("createCharacter")
     public String createCharacter(){
         System.out.println("crear personaje");
-        return "character/DiseñoPersonaje";
+        return "character/DesignCharacter";
     }
 
     @PostMapping("/saveUser")
