@@ -30,11 +30,17 @@ public class UserController {
         return "credentials/LoginCredentials";
     }
 
+    @GetMapping("createCharacter")
+    public String createCharacter(){
+        System.out.println("crear personaje");
+        return "character/DiseñoPersonaje";
+    }
+
     @PostMapping("/saveUser")
     public String save(User user){
         LOGGER.info("Usuario:  " + user); //Con esto podemos ver los cambios hechoes en labase de datos, se vera por la consola Uwu
         userRepository.save(user);
-        return "redirect:/"; //Esto hay que cambiarlo cuando el juego este listo Owo
+        return "redirect:/createCharacter"; //Esto hay que cambiarlo cuando el juego este listo Owo
                                   //En teoria deberia llevarnos al diseño de personaje
     }
 

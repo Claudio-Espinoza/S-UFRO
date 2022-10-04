@@ -17,85 +17,27 @@
 <div class="container-fluid content">
 
     <div class="content__optionBox ">
-        <form class="content__optionBox--form" id="form2" method="post" action="" enctype="multipart/form-data">
-            <h2>Pelo</h2>
-            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-            <label class="btn btn-secondary" for="option1">Checked</label>
+        <form class="form-horizontal" th:action="@{/savePersonaje}" method="post" enctype="multipart/form-data">
+            <div class="form-group" id="names">S
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" name="name" autocomplete="off" required>
+                </div>
 
-            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-            <label class="btn btn-secondary" for="option2">Radio</label>
+                <div class="col-sm-10">
+                    <input type="radio" class="form-control" id="color1" name="color" value="rojo"  autocomplete="off" required>
+                    <input type="radio" class="form-control" id="color2" name="color" value="Verde" autocomplete="off" required>
+                    <input type="radio" class="form-control" id="color3" name="color" value="Azul" autocomplete="off" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <button type="submit" >
+                        a
+                    </button>
 
-            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-            <label class="btn btn-secondary" for="option3">Disabled</label>
+                </div>
+            </div>
 
-            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-            <label class="btn btn-secondary" for="option4">Radio</label>
-
-            <h2>Piel</h2>
-            <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off" checked>
-            <label class="btn btn-secondary" for="option1">Checked</label>
-
-            <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
-            <label class="btn btn-secondary" for="option2">Radio</label>
-
-            <input type="radio" class="btn-check" name="options" id="option7" autocomplete="off" disabled>
-            <label class="btn btn-secondary" for="option3">Disabled</label>
-
-            <input type="radio" class="btn-check" name="options" id="option8" autocomplete="off">
-            <label class="btn btn-secondary" for="option4">Radio</label>
-
-            <h2>Polera</h2>
-            <input type="radio" class="btn-check" name="options" id="option9" autocomplete="off" checked>
-            <label class="btn btn-secondary" for="option1">Checked</label>
-
-            <input type="radio" class="btn-check" name="options" id="option10" autocomplete="off">
-            <label class="btn btn-secondary" for="option2">Radio</label>
-
-            <input type="radio" class="btn-check" name="options" id="option11" autocomplete="off" disabled>
-            <label class="btn btn-secondary" for="option3">Disabled</label>
-
-            <input type="radio" class="btn-check" name="options" id="option12" autocomplete="off">
-            <label class="btn btn-secondary" for="option4">Radio</label>
-
-            <h2>Polera</h2>
-            <input type="radio" class="btn-check" name="options" id="option13" autocomplete="off" checked>
-            <label class="btn btn-secondary" for="option1">Checked</label>
-
-            <input type="radio" class="btn-check" name="options" id="option14" autocomplete="off">
-            <label class="btn btn-secondary" for="option2">Radio</label>
-
-            <input type="radio" class="btn-check" name="options" id="option15" autocomplete="off" disabled>
-            <label class="btn btn-secondary" for="option3">Disabled</label>
-
-            <input type="radio" class="btn-check" name="options" id="option16" autocomplete="off">
-            <label class="btn btn-secondary" for="option4">Radio</label>
-
-            <h2>Pantalon</h2>
-            <input type="radio" class="btn-check" name="options" id="option17" autocomplete="off" checked>
-            <label class="btn btn-secondary" for="option1">Checked</label>
-
-            <input type="radio" class="btn-check" name="options" id="option18" autocomplete="off">
-            <label class="btn btn-secondary" for="option2">Radio</label>
-
-            <input type="radio" class="btn-check" name="options" id="option19" autocomplete="off" disabled>
-            <label class="btn btn-secondary" for="option3">Disabled</label>
-
-            <input type="radio" class="btn-check" name="options" id="option20" autocomplete="off">
-            <label class="btn btn-secondary" for="option4">Radio</label>
-
-            <h2>Zapatilla</h2>
-            <input type="radio" class="btn-check" name="options" id="option21" autocomplete="off" checked>
-            <label class="btn btn-secondary" for="option1">Checked</label>
-
-            <input type="radio" class="btn-check" name="options" id="option22" autocomplete="off">
-            <label class="btn btn-secondary" for="option2">Radio</label>
-
-            <input type="radio" class="btn-check" name="options" id="option23" autocomplete="off" disabled>
-            <label class="btn btn-secondary" for="option3">Disabled</label>
-
-            <input type="radio" class="btn-check" name="options" id="option24" autocomplete="off">
-            <label class="btn btn-secondary" for="option4">Radio</label>
-            <button name="enviar" type="submit">Enviar Formulario</button>
         </form>
     </div>
     <div class="imgBox">
