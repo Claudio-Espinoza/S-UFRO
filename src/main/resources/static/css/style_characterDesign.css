@@ -1,8 +1,14 @@
 /*--||Diseños generales||------------------------------------------------------------------------------------*/
 * {
     font-family: monospace;
-    margin: 0px;
-    padding: 0px;
+}
+.body_characterDesign--background
+{
+    background-image: url('../images/backgroundCharacterCreation.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 input[type="radio"] {
@@ -57,7 +63,7 @@ input[type="radio"]:checked {
 
 .container__skin--input{
     background-color: #B1B5ff;
-    margin-top: 3.5vh;
+    margin-top: 5vh;
     text-align: center;
 }
 
@@ -73,13 +79,13 @@ input[type="radio"]:checked {
 }
 
 .hair__input--type, .top__input--type, .button__input--type, .shoe__input--type{
-    background-color: #B1B5ff;
+    background-color: white;
     margin-top: 3.9vh;
     text-align: center;
 }
 
 .hair__input--color, .top__input--color, .button__input--color,  .shoe__input--color{
-    background-color: #B1B5ff;
+    background-color: black;
     margin-top: 3.9vh;
     text-align: center;
 }

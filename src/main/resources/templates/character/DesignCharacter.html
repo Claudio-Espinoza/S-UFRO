@@ -5,159 +5,162 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{css/style_character.css}">
+    <link rel="stylesheet" th:href="@{css/style_characterDesign.css}">
     <title>Document</title>
 </head>
 
-<body>
+<body class="body_characterDesign--background">
 <div class="container">
-    <div class="container__optionBox ">
-        <form class="form" th:action="@{/savePersonaje}" method="post" enctype="multipart/form-data">
-            <div class="form__container" id="names">
+    <div class="row">
 
-                <h1>Diseño de personaje</h1>
-                <div class="container--name">
-                    <h2>Nombre de Personaje</h2>
-                    <input type="text" class="input name" id="name" name="name" autocomplete="off" required>
-                </div>
-
-
-                <div class="container__skin">
-                    <div class="container__tittle--skin">
-                        icono:piel
-                    </div>
-                    <div class="container__skin--input">
-                        <input type="radio" class="input skin" id="tipo1" name="skin" value="Blanco"
-                               autocomplete="off" required>
-                        <input type="radio" class="input skin" id="tipo2" name="skin" value="humilde"
-                               autocomplete="off" required>
-                        <input type="radio" class="input skin" id="tipo3" name="skin" value="Indigena"
-                               autocomplete="off" required>
-                        <input type="radio" class="input skin" id="tipo4" name="skin" value="Haitiano"
-                               autocomplete="off" required>
-                    </div>
-                </div>
-
-                <div class="container__hair">
-                    <div class="container__tittle--hair">
-                        icono:pelo
-                    </div>
-                    <div class="container__input--divisor">
-                        <div class="hair__input--type">
-                            <input type="radio" class="input hair" id="tipo9" name="typeHair" value="Blanco"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="tipo10" name="typeHair" value="humilde"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="tipo11" name="typeHair" value="Indigena"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="tipo12" name="typeHair" value="Haitiano"
-                                   autocomplete="off" required>
+            <div class="container__optionBox ">
+                <form class="form" th:action="@{/savePersonaje}" method="post" enctype="multipart/form-data">
+                    <div class="form__container" id="names">
+                        <h1>Diseño de personaje</h1>
+                        <div class="container--name">
+                            <h3>Nombre de Personaje</h3>
+                            <input type="text" class="input name" id="name" name="name" autocomplete="off" required>
                         </div>
 
-                        <div class="hair__input--color">
-                            <input type="radio" class="input hair" id="color5" name="colorHair" value="Blanco"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="color6" name="colorHair" value="humilde"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="color7" name="colorHair" value="Indigena"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="color8" name="colorHair" value="Haitiano"
-                                   autocomplete="off" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container__top">
-                    <div class="container__tittle--top">
-                        icono:Top
-                    </div>
-                    <div class="container__input--divisor">
-                        <div class="top__input--type">
-                            <input type="radio" class="input top" id="tipo13" name="typeTop" value="Blanco"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input top" id="tipo14" name="typeTop" value="humilde"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input top" id="tipo15" name="typeTop" value="Indigena"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input top" id="tipo16" name="typeTop" value="Haitiano"
-                                   autocomplete="off" required>
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="container__skin">
+                                <div class="container__tittle--skin">
+                                    icono:piel
+                                </div>
+                                <div class="container__skin--input">
+                                    <input type="radio" class="input skin" id="tipo1" name="skin" value="Blanco"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input skin" id="tipo2" name="skin" value="humilde"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input skin" id="tipo3" name="skin" value="Indigena"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input skin" id="tipo4" name="skin" value="Haitiano"
+                                       autocomplete="off" required>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="top__input--color">
-                            <input type="radio" class="input top" id="color9" name="colorTop" value="Blanco"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input top" id="color10" name="colorTop" value="humilde"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input top" id="color11" name="colorTop" value="Indigena"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input top" id="color12" name="colorTop" value="Haitiano"
-                                   autocomplete="off" required>
-                        </div>
-                    </div>
-                </div>
+                        <div class="container__hair">
+                            <div class="container__tittle--hair">
+                                icono:pelo
+                            </div>
+                            <div class="container__input--divisor">
+                                <div class="hair__input--type">
+                                    <input type="radio" class="input hair" id="tipo9" name="typeHair" value="Blanco"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input hair" id="tipo10" name="typeHair" value="humilde"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input hair" id="tipo11" name="typeHair" value="Indigena"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input hair" id="tipo12" name="typeHair" value="Haitiano"
+                                       autocomplete="off" required>
+                                </div>
 
-
-                <div class="container__button">
-                    <div class="container__tittle--button">
-                        icono:Pantalon
-                    </div>
-                    <div class="container__input--divisor">
-                        <div class="button__input--type">
-                            <input type="radio" class="input button" id="tipo17" name="typeButton" value="Blanco"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="tipo18" name="typeButton" value="humilde"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="tipo19" name="typeButton" value="Indigena"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="tipo20" name="typeButton" value="Haitiano"
-                                   autocomplete="off" required>
-                        </div>
-
-                        <div class="button__input--color">
-                            <input type="radio" class="input button" id="color13" name="colorButton" value="Blanco"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="color14" name="colorButton" value="humilde"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="color15" name="colorButton" value="Indigena"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="color16" name="colorButton" value="Haitiano"
-                                   autocomplete="off" required>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="container__shoe">
-                    <div class="container__tittle--shoe">
-                        icono:shoe
-                    </div>
-                    <div class="container__input--divisor">
-                        <div class="shoe__input--type">
-                            <input type="radio" class="input shoe" id="tipo31" name="typeShoe" value="Blanco"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input shoe" id="tipo32" name="typeShoe" value="humilde"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input shoe" id="tipo33" name="typeShoe" value="Indigena"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input shoe" id="tipo34" name="typeShoe" value="Haitiano"
-                                   autocomplete="off" required>
+                                <div class="hair__input--color">
+                                    <input type="radio" class="input hair" id="color5" name="colorHair" value="Blanco"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input hair" id="color6" name="colorHair" value="humilde"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input hair" id="color7" name="colorHair" value="Indigena"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input hair" id="color8" name="colorHair" value="Haitiano"
+                                       autocomplete="off" required>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="shoe__input--color">
-                            <input type="radio" class="input shoe" id="color37" name="colorShoe" value="Blanco"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input shoe" id="color38" name="colorShoe" value="humilde"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input shoe" id="color39" name="colorShoe" value="Indigena"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input shoe" id="color30" name="colorShoe" value="Haitiano"
-                                   autocomplete="off" required>
+                        <div class="container__top">
+                            <div class="container__tittle--top">
+                                icono:Top
+                            </div>
+                            <div class="container__input--divisor">
+                                <div class="top__input--type">
+                                    <input type="radio" class="input top" id="tipo13" name="typeTop" value="Blanco"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input top" id="tipo14" name="typeTop" value="humilde"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input top" id="tipo15" name="typeTop" value="Indigena"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input top" id="tipo16" name="typeTop" value="Haitiano"
+                                       autocomplete="off" required>
+                                </div>
+
+                                <div class="top__input--color">
+                                    <input type="radio" class="input top" id="color9" name="colorTop" value="Blanco"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input top" id="color10" name="colorTop" value="humilde"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input top" id="color11" name="colorTop" value="Indigena"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input top" id="color12" name="colorTop" value="Haitiano"
+                                       autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="container__button">
+                            <div class="container__tittle--button">
+                                icono:Pantalon
+                            </div>
+                            <div class="container__input--divisor">
+                                <div class="button__input--type">
+                                    <input type="radio" class="input button" id="tipo17" name="typeButton" value="Blanco"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input button" id="tipo18" name="typeButton" value="humilde"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input button" id="tipo19" name="typeButton" value="Indigena"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input button" id="tipo20" name="typeButton" value="Haitiano"
+                                       autocomplete="off" required>
+                                </div>
+
+                                <div class="button__input--color">
+                                    <input type="radio" class="input button" id="color13" name="colorButton" value="Blanco"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input button" id="color14" name="colorButton" value="humilde"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input button" id="color15" name="colorButton" value="Indigena"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input button" id="color16" name="colorButton" value="Haitiano"
+                                       autocomplete="off" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="container__shoe">
+                            <div class="container__tittle--shoe">
+                                icono:shoe
+                            </div>
+                            <div class="container__input--divisor">
+                                <div class="shoe__input--type">
+                                    <input type="radio" class="input shoe" id="tipo31" name="typeShoe" value="Blanco"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input shoe" id="tipo32" name="typeShoe" value="humilde"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input shoe" id="tipo33" name="typeShoe" value="Indigena"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input shoe" id="tipo34" name="typeShoe" value="Haitiano"
+                                       autocomplete="off" required>
+                                </div>
+
+                                <div class="shoe__input--color">
+                                    <input type="radio" class="input shoe" id="color37" name="colorShoe" value="Blanco"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input shoe" id="color38" name="colorShoe" value="humilde"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input shoe" id="color39" name="colorShoe" value="Indigena"
+                                       autocomplete="off" required>
+                                    <input type="radio" class="input shoe" id="color30" name="colorShoe" value="Haitiano"
+                                       autocomplete="off" required>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-
+                </form>
             </div>
-        </form>
+
     </div>
 
     <div class="container__character">a
