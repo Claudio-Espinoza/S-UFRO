@@ -12,7 +12,7 @@ input[type="radio"] {
 input[type="radio"]:checked {
     opacity: 80%;
     border-color: rgb(219, 207, 207);
-    border-width: 1vw;
+    border-width: 10px;
     border-style: solid;
 }
 
