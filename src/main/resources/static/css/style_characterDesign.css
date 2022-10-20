@@ -1,100 +1,101 @@
-/*--||Diseños generales||------------------------------------------------------------------------------------*/
+/*--||General||----------------------------------------------------------------------------------------------*/
 * {
     font-family: monospace;
-}
-.body_characterDesign--background
-{
-    background-image: url('../images/backgroundCharacterCreation.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    background-position: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 input[type="radio"] {
-    margin-right: 2vw;
     appearance: none;
-    background-color: rgb(44, 93, 201);;
 }
 
 input[type="radio"]:checked {
-    background-color: aqua;
+    opacity: 80%;
+    border-color: rgb(219, 207, 207);
+    border-width: 1vw;
+    border-style: solid;
 }
+
+/*-----------------------------------------------------------------------------------------------------------*/
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8fr 1.5fr;
     width: 100vw;
     height: 100vh;
+    background-image: url("../images/backgroundDesign.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-.form {
-    height: 100vh;
+/*--||seccion alta||-----------------------------------------------------------------------------------------*/
+.container__characterUp {
     display: grid;
-    grid-template-rows: 11fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.form__container {
+/*--||seccion left||-----------------------------------------------------------------------------------------*/
+.container__left{
+    background-color: rgb(255, 60, 0);
+    opacity: 35%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/*--||seccion right||----------------------------------------------------------------------------------------*/
+.container__right{
+    background-color: rgb(0, 255, 34);
+    opacity: 35%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/*--||seccion avatar||---------------------------------------------------------------------------------------*/
+.avatar{
+    width: 90%;
+    margin-top: 14%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/*--||seccion baja||-----------------------------------------------------------------------------------------*/
+.container__characterDown {
     display: grid;
-    grid-template-rows: 0.1fr 0.5fr 1fr 2fr 2fr 2fr 2fr;
-    width: 100%;
-    height: 100%;
+    grid-template-rows: 8fr 3fr;
 }
 
-.input{
-    width: 8vw;
-    height: 5vh;
+.character__submit{
+    text-align: center;
+
 }
 
-/*--||Diseños por secciones||--------------------------------------------------------------------------------*/
-/*-------||Nombre||-------*/
-.container--name {
-    background-color: #946C52;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+.character__submit--buttom{
+    width: 6vw;
+    height: 3vh;
 }
 
-/*-------|| Skin ||-------*/
-.container__skin{
-    display: grid;
-    grid-template-columns: 1fr 6.5fr;
-}
-
-
-.container__skin--input{
-    background-color: #B1B5ff;
-    margin-top: 5vh;
+.character__skin{
     text-align: center;
 }
 
-.container__tittle--skin{
-    margin-top: 4.8vh;
-    text-align: center;
+.skin{
+    margin-top: 1vw ;
+    width: 14vw;
+    height: 6vh;
 }
 
-/*-------|| Hair - Top ||-------*/
-.container__hair, .container__top, .container__button, .container__shoe{
-    display: grid;
-    grid-template-columns: 1fr 6.5fr;
+#skin1{
+    background-color: #DFBC96;
+}
+#skin2{
+    background-color: #C7935A;
+}
+#skin3{
+    background-color: #735440;
+}
+#skin4{
+    background-color: #59432C;
 }
 
-.hair__input--type, .top__input--type, .button__input--type, .shoe__input--type{
-    background-color: white;
-    margin-top: 3.9vh;
-    text-align: center;
-}
-
-.hair__input--color, .top__input--color, .button__input--color,  .shoe__input--color{
-    background-color: black;
-    margin-top: 3.9vh;
-    text-align: center;
-}
-
-.container__tittle--hair, .container__tittle--top, .container__tittle--button, .container__tittle--shoe{
-    margin-top: 10vh;
-    text-align: center;
-}
-
-
-
-
+/*-----------------------------------------------------------------------------------------------------------*/

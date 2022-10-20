@@ -6,8 +6,8 @@ import javax.persistence.*;
 public class PersonajePrincipal {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
-    @Column(length=45, nullable=false, unique = true )
-    private String name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;;
     private String colorHair;
     private String typeHair;
 
@@ -29,11 +29,13 @@ public class PersonajePrincipal {
 
     //-|Getter y Setter|----------------------------------------------------------------------------------------------//
 
-    public String getName() {
-        return name;
+
+    public Integer getId() {
+        return id;
     }
-    public void setName(String name) {
-        this.name = name;
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getColorHair() {
@@ -103,7 +105,15 @@ public class PersonajePrincipal {
     @Override
     public String toString() {
         return "PersonajePrincipal{" +
-                "nickName=" + name +
+                "id=" + id +
+                ", colorHair='" + colorHair + '\'' +
+                ", typeHair='" + typeHair + '\'' +
+                ", typeTop='" + typeTop + '\'' +
+                ", colorTop='" + colorTop + '\'' +
+                ", typeButton='" + typeButton + '\'' +
+                ", colorButton='" + colorButton + '\'' +
+                ", typeShoe='" + typeShoe + '\'' +
+                ", colorShoe='" + colorShoe + '\'' +
                 '}';
     }
 }
