@@ -21,21 +21,18 @@ public class AdminController {
     @GetMapping("/adminChattelShow")
     public String showAdmin(Model model) {
             model.addAttribute("user", userRepository.findAll());
-            System.out.println("Ver Usuario");
         return "admin/ControlUser";
     }
 
     //-|Ver el menu del administrador|-//
     @GetMapping("/adminShowMenu")
     public String showMenuAdmin() {
-        System.out.println("Ver Menu");
         return "admin/Menu";
     }
 
     //-|Ver el panel validaor del administrador|-//
     @GetMapping("/credentialsAdmin")
     public String credentialsAdmin() {
-        System.out.println("Ver Login Admin");
         return "credentials/LoginCredentialsAdmin";
     }
 
