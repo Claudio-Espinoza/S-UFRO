@@ -20,19 +20,16 @@ public class UserController {
 
     @GetMapping("")
     public String initian(){
-        System.out.println("Inicio"); //Esto lo pongo para asegurar no mas
         return "credentials/InitianPage";
     }
 
     @GetMapping("loginCredentials")
     public String logIn(){
-        System.out.println("Login");
         return "credentials/LoginCredentials";
     }
 
     @GetMapping("createCharacter")
     public String createCharacter(){
-        System.out.println("crear personaje");
         return "character/DesignCharacter";
     }
 
