@@ -7,7 +7,7 @@ public class PersonajePrincipal {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;;
+    private Integer id;
     private String colorHair;
     private String typeHair;
 
@@ -99,21 +99,4 @@ public class PersonajePrincipal {
         this.colorShoe = colorShoe;
     }
 
-//-|toString|-----------------------------------------------------------------------------------------------------//
-
-
-    @Override
-    public String toString() {
-        return "PersonajePrincipal{" +
-                "id=" + id +
-                ", colorHair='" + colorHair + '\'' +
-                ", typeHair='" + typeHair + '\'' +
-                ", typeTop='" + typeTop + '\'' +
-                ", colorTop='" + colorTop + '\'' +
-                ", typeButton='" + typeButton + '\'' +
-                ", colorButton='" + colorButton + '\'' +
-                ", typeShoe='" + typeShoe + '\'' +
-                ", colorShoe='" + colorShoe + '\'' +
-                '}';
-    }
 }

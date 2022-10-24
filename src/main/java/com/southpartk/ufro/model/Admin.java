@@ -35,13 +35,5 @@ public class Admin {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    //-|toString|-----------------------------------------------------------------------------------------------------//
-    @Override
-    public String toString() {
-        return "Administrador{" +
-                "rut='" + rut + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+    
 }
