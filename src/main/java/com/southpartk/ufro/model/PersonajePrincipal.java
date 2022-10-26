@@ -23,12 +23,22 @@ public class PersonajePrincipal {
 
     private String colorShoe;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="name")
+    private User user;
+
     //-|Construcor|---------------------------------------------------------------------------------------------------//
     public PersonajePrincipal() {
     }
 
     //-|Getter y Setter|----------------------------------------------------------------------------------------------//
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public Integer getId() {
         return id;
