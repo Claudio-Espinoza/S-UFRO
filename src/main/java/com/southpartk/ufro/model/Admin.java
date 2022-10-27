@@ -9,16 +9,17 @@ public class Admin {
     @Column(length=11, nullable=false, unique = true)
     private String rut;
     @Column(length=45)
-    private String password;
+    private int password;
 
     //-|Constructor|--------------------------------------------------------------------------------------------------//
     public Admin() {
     }
 
-    public Admin(String rut, String password) {
+    public Admin(String rut, int password) {
         this.rut = rut;
         this.password = password;
     }
+
     //-|getter/Setter|-----------------------------------------------------------------------------------------------------//
     public String getRut() {
         return rut;
@@ -28,12 +29,11 @@ public class Admin {
         this.rut = rut;
     }
 
-    public String getPassword() {
+    public int getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(int password) {
         this.password = password;
     }
-    
 }

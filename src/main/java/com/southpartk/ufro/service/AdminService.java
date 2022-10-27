@@ -13,4 +13,16 @@ public class AdminService {
         return adminRepository.existsById(rut);
     }
 
+    public boolean validationId(String rut) {
+        var admin = adminRepository.findById(rut);
+        var passwordIdenty= admin.get().getPassword();
+        if(passwordIdenty == 1234){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+
 }

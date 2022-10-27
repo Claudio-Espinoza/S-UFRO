@@ -17,6 +17,7 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+
     //-|Ver el panel principal del administrador|-//
     @GetMapping("/adminChattelShow")
     public String showAdmin(Model model) {
@@ -39,9 +40,13 @@ public class AdminController {
     //-|Validar administrador|-//
     @PostMapping("/validationAdmin")
     public String validationAdmin(String rut) {
-        if(adminService.existsById(rut)){
+    if(adminService.existsById(rut)){
+        if(adminService.validationId(rut)){
             return  "redirect:/adminShowMenu";
-        } else {
+        }else{
+            return "redirect:/credentialsAdmin";
+        }
+        }else{
             return "redirect:/credentialsAdmin";
         }
     }
