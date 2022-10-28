@@ -8,5 +8,4 @@ public class UfroApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UfroApplication.class, args);
 	}
-
 }
