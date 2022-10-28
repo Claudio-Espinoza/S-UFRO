@@ -39,9 +39,9 @@ public class AdminController {
 
     //-|Validar administrador|-//
     @PostMapping("/validationAdmin")
-    public String validationAdmin(String rut) {
+    public String validationAdmin(String rut, String password) {
     if(adminService.existsById(rut)){
-        if(adminService.validationId(rut)){
+        if(adminService.validationId(rut, password)){
             return  "redirect:/adminShowMenu";
         }else{
             return "redirect:/credentialsAdmin";
