@@ -1,6 +1,6 @@
 package com.southpartk.ufro.controller;
 
-import com.southpartk.ufro.model.PersonajePrincipal;
+import com.southpartk.ufro.model.PersonagePrimary;
 import com.southpartk.ufro.repository.PersonajePrincipalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,16 +11,16 @@ import java.util.logging.Logger;
 
 @Controller
 @RequestMapping("/")
-public class PersonajePrincipalController {
+public class PersonagePrimaryController {
 
     @Autowired
     PersonajePrincipalRepository personajePrincipalRepository;
-    private final Logger LOGGER = Logger.getLogger(String.valueOf(PersonajePrincipalController.class));
+    private final Logger LOGGER = Logger.getLogger(String.valueOf(PersonagePrimaryController.class));
 
     @PostMapping("/savePersonaje")
-    public String savePersonaje(PersonajePrincipal personajePrincipal){
-        LOGGER.info("nick:  " + personajePrincipal);
-        personajePrincipalRepository.save(personajePrincipal);
+    public String savePersonaje(PersonagePrimary personagePrimary){
+        LOGGER.info("nick:  " + personagePrimary);
+        personajePrincipalRepository.save(personagePrimary);
         return "redirect:/";
     }
 }

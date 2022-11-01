@@ -3,7 +3,7 @@ package com.southpartk.ufro.model;
 import javax.persistence.*;
 
 @Entity
-public class PersonajePrincipal {
+public class PersonagePrimary {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +28,7 @@ public class PersonajePrincipal {
     private User user;
 
     //-|Construcor|---------------------------------------------------------------------------------------------------//
-    public PersonajePrincipal() {
+    public PersonagePrimary() {
     }
 
     //-|Getter y Setter|----------------------------------------------------------------------------------------------//
