@@ -18,30 +18,26 @@
                 <div class="container__hair">
                     <div class="container__input--divisor">
                         <div class="hair__input--type">
-                            <input type="radio" class="input hair" id="hair1" name="typeHair" value="Corto"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="hair2" name="typeHair" value="Largo"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="hair3" name="typeHair" value="Extravagante"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="hair4" name="typeHair" value="Gorro"
-                                   autocomplete="off" required>
+                            <input type="radio" class="input hair1" id="hair1" name="typeHair" value="Corto"
+                                   autocomplete="off" required onclick="avatarDesignSelection(0,0);">
+                            <input type="radio" class="input hair1" id="hair2" name="typeHair" value="Largo"
+                                   autocomplete="off" required onclick="avatarDesignSelection(0,1);">
+                            <input type="radio" class="input hair1" id="hair3" name="typeHair" value="Extravagante"
+                                   autocomplete="off" required onclick="avatarDesignSelection(0,2);">
+                            <input type="radio" class="input hair1" id="hair4" name="typeHair" value="Gorro"
+                                   autocomplete="off" required onclick="avatarDesignSelection(0,3);">
                         </div>
 
                         <div class="hair__input--color">
-                            <input type="radio" class="input hair" id="hairColor1" name="colorHair" value="Rubio"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="hairColor2" name="colorHair" value="Negro"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="hairColor3" name="colorHair" value="Castaño"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input hair" id="hairColor4" name="colorHair" value="Colorin"
-                                   autocomplete="off" required>
+                            <input type="radio" class="input hair2" id="hairColor1" name="colorHair" value="Rubio"
+                                   autocomplete="off" required onclick="avatarDesignSelection(0,4);">
+                            <input type="radio" class="input hair2" id="hairColor2" name="colorHair" value="Negro"
+                                   autocomplete="off" required onclick="avatarDesignSelection(0,5);">
+                            <input type="radio" class="input hair2" id="hairColor3" name="colorHair" value="Castaño"
+                                   autocomplete="off" required onclick="avatarDesignSelection(0,6);">
+                            <input type="radio" class="input hair2" id="hairColor4" name="colorHair" value="Colorin"
+                                   autocomplete="off" required onclick="avatarDesignSelection(0,7);">
                         </div>
-                    </div>
-
-                    <div class="container__tittle--hair">
-                        icono:pelo
                     </div>
                 </div>
 
@@ -49,67 +45,57 @@
                     <div class="container__input--divisor">
                         <div class="top__input--type">
                             <input type="radio" class="input top" id="top1" name="typeTop" value="None"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(1,0);">
                             <input type="radio" class="input top" id="top2" name="typeTop" value="Polera"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(1,1);">
                             <input type="radio" class="input top" id="top3" name="typeTop" value="Animada"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(1,2);">
                             <input type="radio" class="input top" id="top4" name="typeTop" value="Poleron"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(1,3);">
                         </div>
 
                         <div class="top__input--color">
                             <input type="radio" class="input top" id="topColor1" name="colorTop" value="Blanco"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(1,4);">
                             <input type="radio" class="input top" id="topColor2" name="colorTop" value="Negro"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(1,5);">
                             <input type="radio" class="input top" id="topColor3" name="colorTop" value="Rojo"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(1,6);">
                             <input type="radio" class="input top" id="topColor4" name="colorTop" value="Azul"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(1,7);">
                         </div>
-                    </div>
-                    <div class="container__tittle--top">
-                        icono:Top
                     </div>
                 </div>
 
-
             </div>
-
             <div class="container__avatar">
                 <img class="avatar" th:src="@{/images/avatarSelections/skinColors/0.png}" >
             </div>
 
             <div class="container__right">
-
                 <div class="container__button">
                     <div class="container__input--divisor">
-                        <div class="button__input--type">
-                            <input type="radio" class="input button" id="buttom1" name="typeButton" value="None"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="buttom2" name="typeButton" value="Pantalon"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="buttom3" name="typeButton" value="Short"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="buttom" name="typeButton" value="Extravagante"
-                                   autocomplete="off" required>
+                        <div class="pant__input--type">
+                            <input type="radio" class="input pant1" id="pant1" name="typePant" value="None"
+                                   autocomplete="off" required onclick="avatarDesignSelection(2,0);">
+                            <input type="radio" class="input pant1" id="pant2" name="typePant" value="Pantalon"
+                                   autocomplete="off" required onclick="avatarDesignSelection(2,1);">
+                            <input type="radio" class="input pant1" id="pant3" name="typePant" value="Short"
+                                   autocomplete="off" required onclick="avatarDesignSelection(2,2);">
+                            <input type="radio" class="input pant1" id="pant4" name="typePant" value="Extravagante"
+                                   autocomplete="off" required onclick="avatarDesignSelection(2,3);">
                         </div>
 
-                        <div class="button__input--color">
-                            <input type="radio" class="input button" id="buttomColor1" name="colorButton" value="Blanco"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="buttomColor2" name="colorButton" value="Negro"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="buttomColor3" name="colorButton" value="Rojo"
-                                   autocomplete="off" required>
-                            <input type="radio" class="input button" id="buttomColor4" name="colorButton" value="Azul"
-                                   autocomplete="off" required>
+                        <div class="pant__input--color">
+                            <input type="radio" class="input pant2" id="pantColor1" name="colorPant" value="Blanco"
+                                   autocomplete="off" required onclick="avatarDesignSelection(2,4);">
+                            <input type="radio" class="input pant2" id="pantColor2" name="colorPant" value="Negro"
+                                   autocomplete="off" required onclick="avatarDesignSelection(2,5);">
+                            <input type="radio" class="input pant2" id="pantColor3" name="colorPant" value="Rojo"
+                                   autocomplete="off" required onclick="avatarDesignSelection(2,6);">
+                            <input type="radio" class="input pant2" id="pantColor4" name="colorPant" value="Azul"
+                                   autocomplete="off" required onclick="avatarDesignSelection(2,7);">
                         </div>
-                    </div>
-
-                    <div class="container__tittle--button">
-                        icono:Pantalon
                     </div>
                 </div>
 
@@ -117,28 +103,25 @@
                     <div class="container__input--divisor">
                         <div class="shoe__input--type">
                             <input type="radio" class="input shoe" id="shoe1" name="typeShoe" value="None"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(3,0);">
                             <input type="radio" class="input shoe" id="shoe2" name="typeShoe" value="zapatillas"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(3,1);">
                             <input type="radio" class="input shoe" id="shoe3" name="typeShoe" value="botas"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(3,2);">
                             <input type="radio" class="input shoe" id="shoe4" name="typeShoe" value="Lujosas"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(3,3);">
                         </div>
 
                         <div class="shoe__input--color">
                             <input type="radio" class="input shoe" id="shoeColor1" name="colorShoe" value="Blanco"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(3,4);">
                             <input type="radio" class="input shoe" id="shoeColor2" name="colorShoe" value="Negro"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(3,5);">
                             <input type="radio" class="input shoe" id="shoeColor3" name="colorShoe" value="Rojo"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(3,6);">
                             <input type="radio" class="input shoe" id="shoeColor4" name="colorShoe" value="Azul"
-                                   autocomplete="off" required>
+                                   autocomplete="off" required onclick="avatarDesignSelection(3,7);">
                         </div>
-                    </div>
-                    <div class="container__tittle--shoe">
-                        icono:shoe
                     </div>
                 </div>
 
@@ -149,18 +132,18 @@
 
             <div class="character__skin">
                 <input type="radio" class="input skin" id="skin1" name="skin" value="Blanco"
-                       autocomplete="off" required onclick="avatarChange(0);">
+                       autocomplete="off" required onclick="avatarSkinChange(0);">
                 <input type="radio" class="input skin" id="skin2" name="skin" value="blancoTostado"
-                       autocomplete="off" required onclick="avatarChange(1);">
+                       autocomplete="off" required onclick="avatarSkinChange(1);">
                 <input type="radio" class="input skin" id="skin3" name="skin" value="cafeClaro"
-                       autocomplete="off" required onclick="avatarChange(2);">
+                       autocomplete="off" required onclick="avatarSkinChange(2);">
                 <input type="radio" class="input skin" id="skin4" name="skin" value="cafeOscuro"
-                       autocomplete="off" required onclick="avatarChange(3);">
+                       autocomplete="off" required onclick="avatarSkinChange(3);">
             </div>
 
             <div class="character__submit">
                 <button class="character__submit--buttom" type="submit">
-                    aaaa
+                    SAVE
                 </button>
             </div>
 
@@ -171,8 +154,12 @@
 </body>
 </html>
 <script>
-    function avatarChange(numberImg){
-        var img = document.querySelector('.avatar').src = "/images/avatarSelections/skinColors/" + numberImg + ".png";
+    function avatarSkinChange(numberImg){
+        var skinColorSelection = document.querySelector('.avatar').src = "/images/avatarSelections/skinColors/" + numberImg + ".png";
+        console.log(img)
+    }
+    function avatarDesignSelection(numberImageSelection, numberTypeSelection){
+        var designImageSelected = document.querySelector('.avatar').src = "/images/avatarSelections/"+numberTypeSelection+"/" + numberImageSelection + ".png";
         console.log(img)
     }
 </script>
