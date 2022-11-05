@@ -6,10 +6,17 @@ import javax.persistence.*;
 public class User {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
-    @Column(length=45, nullable=false, unique = true )
+    @Column(length = 45, nullable = false, unique = true)
     private String name;
-    @Column(length=45)
-    private String password;
+    private String type;
+    private String colorHair;
+    private String typeHair;
+    private String typeTop;
+    private String colorTop;
+    private String typeButton;
+    private String colorButton;
+    private String typeShoe;
+    private String colorShoe;
 
     //-|Construcor|---------------------------------------------------------------------------------------------------//
     public User() {
@@ -24,12 +31,75 @@ public class User {
         this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getType() {
+        return type;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setType(String type) {
+        this.type = type;
     }
 
+    public String getColorHair() {
+        return colorHair;
+    }
+
+    public void setColorHair(String colorHair) {
+        this.colorHair = colorHair;
+    }
+
+    public String getTypeHair() {
+        return typeHair;
+    }
+
+    public void setTypeHair(String typeHair) {
+        this.typeHair = typeHair;
+    }
+
+    public String getTypeTop() {
+        return typeTop;
+    }
+
+    public void setTypeTop(String typeTop) {
+        this.typeTop = typeTop;
+    }
+
+    public String getColorTop() {
+        return colorTop;
+    }
+
+    public void setColorTop(String colorTop) {
+        this.colorTop = colorTop;
+    }
+
+    public String getTypeButton() {
+        return typeButton;
+    }
+
+    public void setTypeButton(String typeButton) {
+        this.typeButton = typeButton;
+    }
+
+    public String getColorButton() {
+        return colorButton;
+    }
+
+    public void setColorButton(String colorButton) {
+        this.colorButton = colorButton;
+    }
+
+    public String getTypeShoe() {
+        return typeShoe;
+    }
+
+    public void setTypeShoe(String typeShoe) {
+        this.typeShoe = typeShoe;
+    }
+
+    public String getColorShoe() {
+        return colorShoe;
+    }
+
+    public void setColorShoe(String colorShoe) {
+        this.colorShoe = colorShoe;
+    }
 }

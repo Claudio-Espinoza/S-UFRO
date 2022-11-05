@@ -10,164 +10,57 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-    opacity: 100%;
+
     border-color: black;
     border-width: 3px;
     border-style: solid;
     box-shadow: 0 0 3px, 0 0 10px black;
+
+
 }
-
 /*-----------------------------------------------------------------------------------------------------------*/
-
-.container {
-    display: grid;
-    grid-template-rows: 8fr 1.5fr;
+.container{
     width: 100vw;
     height: 100vh;
     background-image: url("../images/backgroundDesign.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
-/*--||seccion alta||-----------------------------------------------------------------------------------------*/
-.container__characterUp {
+
+.form {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5fr 1.2fr;
+    width: 100vw;
+    height: 100vh;
 }
 
-/*--||seccion left||-----------------------------------------------------------------------------------------*/
-.container__left{
-    background-color: transparent;
-    opacity: 100%;
-}
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/*--||seccion right||----------------------------------------------------------------------------------------*/
-.container__right{
-    background-color: transparent;
-    opacity: 100%;
-}
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/*--||seccion avatar||---------------------------------------------------------------------------------------*/
-.avatar{
-    width: 100%;
-    margin-top: 14%;
-}
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-/*--||seccion baja||-----------------------------------------------------------------------------------------*/
-.container__characterDown {
+.option__input{
     display: grid;
-    grid-template-rows: 8fr 3fr;
+    grid-template-columns: 1fr 7fr 1fr;
+    text-align: center;
+}
+
+.type{
+    background-color: rgb(0, 0, 0);
+    width: 8vw;
+    height: 10vh;
 }
 
 .character__submit{
-    text-align: center;
+    background-color: aliceblue;
 }
 
-.character__submit--buttom{
-    width: 6vw;
-    height: 3vh;
-}
-/*-----------Hair Selection Align----------------------------------------------------------------------------*/
-.hair1{
-    margin-top: 6vw ;
-    width: 5.5vw;
-    height: 5.5vh;
-}
-.hair2{
-    margin-top: 2vw ;
-    width: 5.5vw;
-    height: 5.5vh;
-}
-.hair__input--type, .hair__input--color{
-    text-align: center;
-}
-.typeHair{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.colorHair{
-    width: 6vw;
-    height: 3vh;
-}
-#hair1, #hair2, #hair3, #hair4{
-    border: 1px solid black;
-    background-color: white;
-}
-#hairColor1{
-    border: 1px solid black;
-    background-color: goldenrod;
-}
-#hairColor2{
-    border: 1px solid black;
-    background-color: black;
-}
-#hairColor3{
-    border: 1px solid black;
-    background-color: saddlebrown;
-}
-#hairColor4{
-    border: 1px solid black;
-    background-color: red;
-}
-/*-----------------------------------------------------------------------------------------------------------*/
-/*-----------Hair Selection Align----------------------------------------------------------------------------*/
-.pant1{
-    margin-top: 6vw ;
-    width: 5.5vw;
-    height: 5.5vh;
-}
-.pant2{
-    margin-top: 2vw ;
-    width: 5.5vw;
-    height: 5.5vh;
-}
-.pant__input--type, .pant__input--color{
-    text-align: left;
-}
-.typePant{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.colorPant{
-    width: 6vw;
-    height: 3vh;
-}
-#pant1, #pant2, #pant3, #pant4{
-    border: 1px solid black;
-    background-color: white;
-}
-#pantColor1, #pantColor2, #pantColor3, #pantColor4{
-    border: 1px solid black;
-    background-color: #abdde5;
-}
-/*-----------------------------------------------------------------------------------------------------------*/
-/*-----------Skin Selection align----------------------------------------------------------------------------*/
-.character__skin{
-    text-align: center;
-}
-.skin{
-    margin-top: 2vw ;
-    width: 14vw;
-    height: 6vh;
-}
-#skin1{
-    background-color: #DFBC96;
-}
-#skin2{
-    background-color: #C7935A;
-}
-#skin3{
-    background-color: #735440;
-}
-#skin4{
-    background-color: #59432C;
+.option__img{
+    margin-left: 32.2vw;
 }
 
-/*-----------------------------------------------------------------------------------------------------------*/
+.sex{
+    background-color: aliceblue;
+}
+
+.input7{
+    margin-top: 1.5vh;
+    background-color: aliceblue;
+    width: 30vw;
+    height: 5vh;
+}

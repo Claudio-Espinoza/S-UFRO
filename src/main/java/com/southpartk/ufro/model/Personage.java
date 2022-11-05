@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class PersonageSecundary {
+public class Personage {
 
     //-|Atributos de Identificador-|//
     @Id
@@ -35,7 +35,7 @@ public class PersonageSecundary {
     //-----------------------------//
 
     //-|Constructor|-//
-    public PersonageSecundary(String name, String lenient, String level, String conduct, String temperament, String age, String graduate, String difficulty, String preferColorHair, String preferTypeHair, String preferTypeTop, String preferColorTop, String preferTypeButton, String preferColorButton, String preferTypeShoe, String preferColorShoe) {
+    public Personage(String name, String lenient, String level, String conduct, String temperament, String age, String graduate, String difficulty, String preferColorHair, String preferTypeHair, String preferTypeTop, String preferColorTop, String preferTypeButton, String preferColorButton, String preferTypeShoe, String preferColorShoe) {
         this.name = name;
         this.lenient = lenient;
         this.level = level;
@@ -54,7 +54,7 @@ public class PersonageSecundary {
         this.preferColorShoe = preferColorShoe;
     }
 
-    public PersonageSecundary() {}
+    public Personage() {}
     //---------------//
 
 
