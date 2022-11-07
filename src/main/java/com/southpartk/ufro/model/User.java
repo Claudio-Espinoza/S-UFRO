@@ -9,14 +9,11 @@ public class User {
     @Column(length = 45, nullable = false, unique = true)
     private String name;
     private String type;
-    private String colorHair;
+    private String skin;
     private String typeHair;
     private String typeTop;
-    private String colorTop;
     private String typeButton;
-    private String colorButton;
     private String typeShoe;
-    private String colorShoe;
 
     //-|Construcor|---------------------------------------------------------------------------------------------------//
     public User() {
@@ -39,20 +36,20 @@ public class User {
         this.type = type;
     }
 
-    public String getColorHair() {
-        return colorHair;
-    }
-
-    public void setColorHair(String colorHair) {
-        this.colorHair = colorHair;
-    }
-
     public String getTypeHair() {
         return typeHair;
     }
 
     public void setTypeHair(String typeHair) {
         this.typeHair = typeHair;
+    }
+
+    public String getSkin() {
+        return skin;
+    }
+
+    public void setSkin(String skin) {
+        this.skin = skin;
     }
 
     public String getTypeTop() {
@@ -63,28 +60,12 @@ public class User {
         this.typeTop = typeTop;
     }
 
-    public String getColorTop() {
-        return colorTop;
-    }
-
-    public void setColorTop(String colorTop) {
-        this.colorTop = colorTop;
-    }
-
     public String getTypeButton() {
         return typeButton;
     }
 
     public void setTypeButton(String typeButton) {
         this.typeButton = typeButton;
-    }
-
-    public String getColorButton() {
-        return colorButton;
-    }
-
-    public void setColorButton(String colorButton) {
-        this.colorButton = colorButton;
     }
 
     public String getTypeShoe() {
@@ -95,11 +76,4 @@ public class User {
         this.typeShoe = typeShoe;
     }
 
-    public String getColorShoe() {
-        return colorShoe;
-    }
-
-    public void setColorShoe(String colorShoe) {
-        this.colorShoe = colorShoe;
-    }
 }
