@@ -31,9 +31,10 @@ public class UserController {
     }
 
     @PostMapping("/saveUser")
-    public String save(User user, String nombre){
+    public String save(User user, String name){
+        System.out.println(name);
         userRepository.save(user);
-        userService.ChangeUser(nombre);
+        userService.ChangeUser(name);
         return "redirect:/"; //Cambiar la direccion
     }
 
