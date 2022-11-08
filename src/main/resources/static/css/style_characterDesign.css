@@ -9,14 +9,12 @@ input[type="radio"] {
     appearance: none;
 }
 
-input[type="radio"]:checked {
-
-    border-color: black;
-    border-width: 3px;
+input[type="radio"]:checked
+{
+    border-color: white;
+    border-width: 1px;
     border-style: solid;
-    box-shadow: 0 0 3px, 0 0 10px black;
-
-
+    box-shadow: 0 0 3px, 0 0 10px white;
 }
 /*-----------------------------------------------------------------------------------------------------------*/
 .container{
@@ -50,21 +48,35 @@ input[type="radio"]:checked {
     display: flexbox;
 }
 
-.character__submit{
-    background-color: aliceblue;
-}
-
 .option__img{
     margin-left: 32.2vw;
 }
 
-.sex{
-    background-color: aliceblue;
+.sign
+{
+    background-color: transparent;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    width: 5vw;
+    height: 5vh;
 }
-
+button
+{
+    background-color: transparent;
+    border: none;
+}
 .input7{
-    margin-top: 1.5vh;
+    margin-top: 1vh;
+    text-align: center;
     background-color: aliceblue;
     width: 30vw;
-    height: 5vh;
+    height: 4.5vh;
+}
+/*--------------------- Save Button----------------------------*/
+.character__submit--buttom
+{
+    background-color: transparent;
+    width: 16vw;
+    height: 9vh;
+    margin-right: 3vw;
 }

@@ -18,8 +18,10 @@
         </div>
 
         <div class="option__input">
-            <div class="sex">
-
+            <div class="sign">
+                <a th:href="@{/}" class="sign">
+                    <img th:src="@{images/backSign.png}">
+                </a>
             </div>
 
             <div class="option__input--option">
@@ -38,12 +40,11 @@
             </div>
 
             <div class="character__submit">
-                <button class="character__submit--buttom" type="submit">
-                    SAVE
+                <button type="submit" >
+                    <img th:src="@{images/saveUserButton.png}" class="character__submit--buttom">
                 </button>
             </div>
         </div>
-
     </form>
 </div>
 </body>
