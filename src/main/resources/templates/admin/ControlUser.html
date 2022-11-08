@@ -21,10 +21,15 @@
                         <div class="card-body">
                             <h5 class="card-title">User: <span th:text="${users.name}"></span>
                                 <img th:src="@{images/avatarToken.png}" class="rigth"></h5>
-                            <p class="card-text">Password: <span th:text="${users.password}"></span> </p>
+                            <p class="card-text">Password: <span th:text="${users.type}"></span> </p>
+                            <p class="card-text">Password: <span th:text="${users.skin}"></span> </p>
+                            <p class="card-text">Password: <span th:text="${users.typeHair}"></span> </p>
+                            <p class="card-text">Password: <span th:text="${users.typeTop}"></span> </p>
+                            <p class="card-text">Password: <span th:text="${users.typeButton}"></span> </p>
+                            <p class="card-text">Password: <span th:text="${users.typeShoe}"></span> </p>
                             <p>Score: aqui va un score xdd</p>
                             <p>info adicional: aqui va info adicional xd</p>
-                            <a href="#" class="btn btn-danger" th:href="@{/deleteUser/{nombre}(nombre=${users.name})}">Delete</a>
+                            <a href="#" class="btn btn-danger" th:href="@{/deleteUser/{name}(name=${users.name})}">Delete</a>
                             <a href="" class="btn btn-secondary">Edit</a>
                         </div>
                     </div>

@@ -19,6 +19,19 @@ public class User {
     public User() {
     }
 
+    //Constructor con el fin de modificar los item no escenciales y poder guardarlos sin modificar los otros elementos UwU
+
+
+    public User(String name, String type, String skin, String typeHair, String typeTop, String typeButton, String typeShoe) {
+        this.name = name;
+        this.type = type;
+        this.skin = skin;
+        this.typeHair = typeHair;
+        this.typeTop = typeTop;
+        this.typeButton = typeButton;
+        this.typeShoe = typeShoe;
+    }
+
     //-|Getter y Setter|----------------------------------------------------------------------------------------------//
     public String getName() {
         return name;
