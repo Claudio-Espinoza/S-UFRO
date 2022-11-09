@@ -12,7 +12,6 @@ public class UserService {
     UserRepository userRepository;
 
     public User ChangeUser(String name, String typeUser) {
-
         switch (typeUser) {
             case "PorDefecto":
                 return new User(name, typeUser, "Humilde", "Generico", "Deportivo", "Buzo", "Tenis");
@@ -20,7 +19,7 @@ public class UserService {
             case "Snob": //Es el habin pero no queremos decir que es el habin, pero en efecto... es el habin
                 return new User(name, typeUser, "Anemia", "Nerd", "Pretencioso", "Pantalon", "Formal");
 
-            case "Rubio":
+            case "Rubio": //Es el benja pero no queremos decir que es el benja, pero en efecto... es el benja
                 return  new User(name, typeUser, "KKK", "Rubio", "Informal", "Jeans", "Comodos");
 
             case "Carbon":

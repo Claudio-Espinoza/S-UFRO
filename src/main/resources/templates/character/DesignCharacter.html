@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{css/style_characterDesign.css}">
-    <title>Document</title>
+    <title>Avatar Creation</title>
 </head>
 
 <body>
 <div class="container">
     <form class="form" th:action="@{/saveUser}" method="post" enctype="multipart/form-data">
 
-        <div class="option__img">
-            <img th:src="@{images/baseAvatar.png}" height="510px">
+        <div class="option__img" id="avatar">
+            <img class="avatar" th:src="@{images/avatarSelections/avatars/type1.png}" >
         </div>
 
         <div class="option__input">
@@ -24,18 +24,18 @@
                 </a>
             </div>
 
-            <div class="option__input--option">
+            <div class="option__input--option" >
                 <div class="input">
-                    <input type="radio" class="input1 type" id="type1" name="type" value="PorDefecto">
-                    <input type="radio" class="input2 type" id="type2" name="type" value="Snob">
-                    <input type="radio" class="input3 type" id="type3" name="type" value="Rubio">
-                    <input type="radio" class="input4 type" id="type4" name="type" value="Carbon">
-                    <input type="radio" class="input5 type" id="type5" name="type" value="Simbolo">
-                    <input type="radio" class="input6 type" id="type6" name="type" value="Informatico">
+                    <input type="radio" class="input1 type" id="type1" name="avatar" value="PorDefecto" onclick="capturarSelection('type1');">
+                    <input type="radio" class="input2 type" id="type2" name="avatar" value="Snob" onclick="capturarSelection('type2');">
+                    <input type="radio" class="input3 type" id="type3" name="avatar" value="Rubio" onclick="capturarSelection('type3');">
+                    <input type="radio" class="input4 type" id="type4" name="avatar" value="Carbon" onclick="capturarSelection('type4');">
+                    <input type="radio" class="input5 type" id="type5" name="avatar" value="Simbolo" onclick="capturarSelection('type5');">
+                    <input type="radio" class="input6 type" id="type6" name="avatar" value="Informatico" onclick="capturarSelection('type6');">
                 </div>
 
                 <div class="name">
-                    <input type="text" class="input7 type" id="name" name="name" placeholder="                    Nombre de usuario" autocomplete="off">
+                    <input type="text" class="input7 type" id="name" name="name" placeholder=" Nombre de usuario" autocomplete="off">
                 </div>
             </div>
 
@@ -44,8 +44,39 @@
                     <img th:src="@{images/saveUserButton.png}" class="character__submit--buttom">
                 </button>
             </div>
+            <!------------------------------- FUNCION DE PRUEBA NO IMPLEMENTADA AUN -------------------------------------------------->
+            <div>
+                <script th:inline="javascript">
+                    /*<![CDATA[*/
+                    function capturarSelection(id) {
+                        var avatar = document.getElementById(id);
+                        var avatarSrc = avatar.getAttribute("src");
+                        var avatarSelection = document.getElementById("avatar");
+                        avatarSelection.innerHTML = "<img class='avatar' src='" + avatarSrc + "'>";
+                    } /* convierte una variable de javascript en una imagen de html en un proceso CREO */
+                    /*]]>*/
+                </script>
+            </div>
+            <!--------------------------------------------------------------------------------------------------------------------->
         </div>
     </form>
 </div>
 </body>
 </html>
+<!--funcion script que captura seleccion de input desde un formulario html -->
+<script>
+    function capturarSelection(valor) {
+        var imageSelection = document.querySelector('.avatar').src = "/images/avatarSelections/avatars/" + valor + ".png";
+        console.log(imageSelection);
+        var selection = document.getElementById(valor).value;
+        if (selection == null){
+            console.log("Debe seleccionar un avatar para continuar");
+        }else{
+            console.log("Avatar seleccionado: " + selection);
+        }
+        return imageSelection;
+        //retorna un valor String de la imagen seleccionada, lo cual podriamos poner en la base(las url de las imagenes) de datos
+        // para luego mostrarlo en el perfil del usuario y acceder a el desde el controlador de usuario para mostrarlo en el juego.
+    }
+
+</script>
