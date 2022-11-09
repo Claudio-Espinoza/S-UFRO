@@ -7,7 +7,31 @@
 
 input[type="radio"] {
     appearance: none;
-    background-color: red;
+    border: black solid 1px;
+}
+#type1{
+    background: url('../images/avatarSelections/icons/type1.png') no-repeat;
+    background-size: 100% 100%;
+}
+#type2{
+    background: url('../images/avatarSelections/icons/type2.png') no-repeat;
+    background-size: 100% 100%;
+}
+#type3{
+    background: url('../images/avatarSelections/icons/type3.png') no-repeat;
+    background-size: 100% 100%;
+}
+#type4{
+    background: url('../images/avatarSelections/icons/type4.png') no-repeat;
+    background-size: 100% 100%;
+}
+#type5{
+    background: url('../images/avatarSelections/icons/type5.png') no-repeat;
+    background-size: 100% 100%;
+}
+#type6{
+    background: url('../images/avatarSelections/icons/type6.png') no-repeat;
+    background-size: 100% 100%;
 }
 
 input[type="radio"]:checked
@@ -48,10 +72,12 @@ input[type="radio"]:checked
     width: 8vw;
     height: 10vh;
 }
-
+/*
 .option__input--option{
     display: flexbox;
 }
+
+ */
 
 .option__img{
     margin-left: 32.2vw;
@@ -70,6 +96,7 @@ button
     background-color: transparent;
     border: none;
 }
+
 .input7{
     margin-top: 1vh;
     text-align: center;

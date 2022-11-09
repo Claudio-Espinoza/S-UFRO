@@ -17,22 +17,25 @@
             <img class="avatar" th:src="@{images/avatarSelections/avatars/type1.png}" >
         </div>
 
+
         <div class="option__input">
+
             <div class="sign">
-                <a th:href="@{/}" class="sign">
-                    <img th:src="@{images/backSign.png}">
+                <a class="sign" >
+                    <img th:src="@{images/femaleSign.png}" onclick="joke()">
                 </a>
             </div>
 
-            <div class="option__input--option" >
+            <div class="option__input--option">
                 <div class="input">
-                    <input type="radio" class="input1 type" id="type1" name="avatar" value="PorDefecto" onclick="capturarSelection('type1');">
-                    <input type="radio" class="input2 type" id="type2" name="avatar" value="Snob" onclick="capturarSelection('type2');">
-                    <input type="radio" class="input3 type" id="type3" name="avatar" value="Rubio" onclick="capturarSelection('type3');">
-                    <input type="radio" class="input4 type" id="type4" name="avatar" value="Carbon" onclick="capturarSelection('type4');">
-                    <input type="radio" class="input5 type" id="type5" name="avatar" value="Simbolo" onclick="capturarSelection('type5');">
-                    <input type="radio" class="input6 type" id="type6" name="avatar" value="Informatico" onclick="capturarSelection('type6');">
+                    <input type="radio" class="input1 type" id="type1" th:src="@{images/avatarSelections/icons/type1.png}" name="avatar" value="PorDefecto" onclick="capturarSelection('type1');">
+                    <input type="radio" class="input2 type" id="type2" th:src="@{images/avatarSelections/icons/type2.png}" name="avatar" value="Snob" onclick="capturarSelection('type2');">
+                    <input type="radio" class="input3 type" id="type3" th:src="@{images/avatarSelections/icons/type3.png}" name="avatar" value="Rubio" onclick="capturarSelection('type3');">
+                    <input type="radio" class="input4 type" id="type4" th:src="@{images/avatarSelections/icons/type4.png}" name="avatar" value="Carbon" onclick="capturarSelection('type4');">
+                    <input type="radio" class="input5 type" id="type5" th:src="@{images/avatarSelections/icons/type5.png}" name="avatar" value="Simbolo" onclick="capturarSelection('type5');">
+                    <input type="radio" class="input6 type" id="type6" th:src="@{images/avatarSelections/icons/type6.png}" name="avatar" value="Informatico" onclick="capturarSelection('type6');">
                 </div>
+
 
                 <div class="name">
                     <input type="text" class="input7 type" id="name" name="name" placeholder=" Nombre de usuario" autocomplete="off">
@@ -48,12 +51,13 @@
             <div>
                 <script th:inline="javascript">
                     /*<![CDATA[*/
-                    function capturarSelection(id) {
+                    function capturar(id) {
                         var avatar = document.getElementById(id);
                         var avatarSrc = avatar.getAttribute("src");
                         var avatarSelection = document.getElementById("avatar");
                         avatarSelection.innerHTML = "<img class='avatar' src='" + avatarSrc + "'>";
-                    } /* convierte una variable de javascript en una imagen de html en un proceso CREO */
+                    } /* convierte una variable de javascript en una imagen de html en un proceso CREO
+                        POR EL MOMENTO, SI SE BORRA LA OTRA FUNCION Y SE DEJA ESTA, AL HACER CLICK SE MUESTRAN LOS ICONOS ¡¡REVISAR!! */
                     /*]]>*/
                 </script>
             </div>
@@ -64,7 +68,7 @@
 </body>
 </html>
 <!--funcion script que captura seleccion de input desde un formulario html -->
-<script>
+<script th:inline="javascript">
     function capturarSelection(valor) {
         var imageSelection = document.querySelector('.avatar').src = "/images/avatarSelections/avatars/" + valor + ".png";
         console.log(imageSelection);
@@ -72,11 +76,16 @@
         if (selection == null){
             console.log("Debe seleccionar un avatar para continuar");
         }else{
-            console.log("Avatar seleccionado: " + selection);
+            alert("Avatar seleccionado: " + selection);
         }
         return imageSelection;
         //retorna un valor String de la imagen seleccionada, lo cual podriamos poner en la base(las url de las imagenes) de datos
         // para luego mostrarlo en el perfil del usuario y acceder a el desde el controlador de usuario para mostrarlo en el juego.
     }
 
+    function joke(){
+        let sound = new Audio('/sounds/laughs.mp3');
+        sound.play();
+        alert("JAJA PERO SI NO HAY NADA DE ESO AQUI");
+    }
 </script>
