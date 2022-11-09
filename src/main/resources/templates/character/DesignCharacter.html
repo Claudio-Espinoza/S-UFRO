@@ -11,6 +11,9 @@
 
 <body>
 <div class="container">
+    <div class="audio">
+        <audio th:src="@{sounds/avatarCreation.mp3}" autoplay loop controls ></audio>
+    </div>
     <form class="form" th:action="@{/saveUser}" method="post" enctype="multipart/form-data">
 
         <div class="option__img" id="avatar">

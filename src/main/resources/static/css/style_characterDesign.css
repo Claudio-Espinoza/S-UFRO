@@ -86,10 +86,12 @@ input[type="radio"]:checked
 .sign
 {
     background-color: transparent;
-    margin-top: 3vh;
     margin-left: 3vw;
     width: 5vw;
     height: 5vh;
+}
+.audio{
+    position: fixed;
 }
 button
 {
