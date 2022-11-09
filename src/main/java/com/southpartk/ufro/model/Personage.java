@@ -1,6 +1,7 @@
 package com.southpartk.ufro.model;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -9,49 +10,32 @@ public class Personage {
 
     //-|Atributos de Identificador-|//
     @Id
-    @Column(length=40, nullable=false, unique = true)
+    @Column(length = 40, nullable = false, unique = true)
     private String name;
-    //------------------------------//
-
-    //-|Atributos de utiles|-//
+    @Column(length = 20, nullable = false)
     private String lenient;
-    private String level;
+    @Column(length = 20)
     private String conduct;
+    @Column(length = 20)
     private String temperament;
     private String age;
+    @Column(length=40)
     private String graduate;
-    private String difficulty;
-    //-|---------------------//
+    private int difficulty;
 
-    //-|Atributos de preferencia|-//
-    private String preferColorHair;
-    private String preferTypeHair;
-    private String preferTypeTop;
-    private String preferColorTop;
-    private String preferTypeButton;
-    private String preferColorButton;
-    private String preferTypeShoe;
-    private String preferColorShoe;
-    //-----------------------------//
 
-    //-|Constructor|-//
-    public Personage(String name, String lenient, String level, String conduct, String temperament, String age, String graduate, String difficulty, String preferColorHair, String preferTypeHair, String preferTypeTop, String preferColorTop, String preferTypeButton, String preferColorButton, String preferTypeShoe, String preferColorShoe) {
+    @Embedded
+    private Preference preference;
+
+    public Personage(String name, String lenient, String conduct, String temperament, String age, String graduate, int difficulty, Preference preference) {
         this.name = name;
         this.lenient = lenient;
-        this.level = level;
         this.conduct = conduct;
         this.temperament = temperament;
         this.age = age;
         this.graduate = graduate;
         this.difficulty = difficulty;
-        this.preferColorHair = preferColorHair;
-        this.preferTypeHair = preferTypeHair;
-        this.preferTypeTop = preferTypeTop;
-        this.preferColorTop = preferColorTop;
-        this.preferTypeButton = preferTypeButton;
-        this.preferColorButton = preferColorButton;
-        this.preferTypeShoe = preferTypeShoe;
-        this.preferColorShoe = preferColorShoe;
+        this.preference = preference;
     }
 
     public Personage() {}
@@ -72,14 +56,6 @@ public class Personage {
 
     public void setLenient(String lenient) {
         this.lenient = lenient;
-    }
-
-    public String getLevel() {
-        return level;
-    }
-
-    public void setLevel(String level) {
-        this.level = level;
     }
 
     public String getConduct() {
@@ -114,75 +90,11 @@ public class Personage {
         this.graduate = graduate;
     }
 
-    public String getDifficulty() {
+    public int getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(String difficulty) {
+    public void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
-    }
-
-    public String getPreferColorHair() {
-        return preferColorHair;
-    }
-
-    public void setPreferColorHair(String preferColorHair) {
-        this.preferColorHair = preferColorHair;
-    }
-
-    public String getPreferTypeHair() {
-        return preferTypeHair;
-    }
-
-    public void setPreferTypeHair(String preferTypeHair) {
-        this.preferTypeHair = preferTypeHair;
-    }
-
-    public String getPreferTypeTop() {
-        return preferTypeTop;
-    }
-
-    public void setPreferTypeTop(String preferTypeTop) {
-        this.preferTypeTop = preferTypeTop;
-    }
-
-    public String getPreferColorTop() {
-        return preferColorTop;
-    }
-
-    public void setPreferColorTop(String preferColorTop) {
-        this.preferColorTop = preferColorTop;
-    }
-
-    public String getPreferTypeButton() {
-        return preferTypeButton;
-    }
-
-    public void setPreferTypeButton(String preferTypeButton) {
-        this.preferTypeButton = preferTypeButton;
-    }
-
-    public String getPreferColorButton() {
-        return preferColorButton;
-    }
-
-    public void setPreferColorButton(String preferColorButton) {
-        this.preferColorButton = preferColorButton;
-    }
-
-    public String getPreferTypeShoe() {
-        return preferTypeShoe;
-    }
-
-    public void setPreferTypeShoe(String preferTypeShoe) {
-        this.preferTypeShoe = preferTypeShoe;
-    }
-
-    public String getPreferColorShoe() {
-        return preferColorShoe;
-    }
-
-    public void setPreferColorShoe(String preferColorShoe) {
-        this.preferColorShoe = preferColorShoe;
     }
 }

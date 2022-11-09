@@ -8,8 +8,9 @@ public class Admin {
     @Id
     @Column(length=11, nullable=false, unique = true)
     private String rut;
-    @Column(length=45)
+    @Column(length=40, unique = true)
     private String password;
+
 
     //-|Constructor|--------------------------------------------------------------------------------------------------//
     public Admin() {

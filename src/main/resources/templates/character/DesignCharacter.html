@@ -31,17 +31,17 @@
 
             <div class="option__input--option">
                 <div class="input">
-                    <input type="radio" class="input1 type" id="type1" th:src="@{images/avatarSelections/icons/type1.png}" name="avatar" value="PorDefecto" onclick="capturarSelection('type1');">
-                    <input type="radio" class="input2 type" id="type2" th:src="@{images/avatarSelections/icons/type2.png}" name="avatar" value="Snob" onclick="capturarSelection('type2');">
-                    <input type="radio" class="input3 type" id="type3" th:src="@{images/avatarSelections/icons/type3.png}" name="avatar" value="Rubio" onclick="capturarSelection('type3');">
-                    <input type="radio" class="input4 type" id="type4" th:src="@{images/avatarSelections/icons/type4.png}" name="avatar" value="Carbon" onclick="capturarSelection('type4');">
-                    <input type="radio" class="input5 type" id="type5" th:src="@{images/avatarSelections/icons/type5.png}" name="avatar" value="Simbolo" onclick="capturarSelection('type5');">
-                    <input type="radio" class="input6 type" id="type6" th:src="@{images/avatarSelections/icons/type6.png}" name="avatar" value="Informatico" onclick="capturarSelection('type6');">
+                    <input type="radio" class="input1 typeDesign" id="type1" th:src="@{images/avatarSelections/icons/type1.png}" name="type" value="PorDefecto" onclick="capturarSelection('type1');" required>
+                    <input type="radio" class="input2 typeDesign" id="type2" th:src="@{images/avatarSelections/icons/type2.png}" name="type" value="Snob" onclick="capturarSelection('type2');" required>
+                    <input type="radio" class="input3 typeDesign" id="type3" th:src="@{images/avatarSelections/icons/type3.png}" name="type" value="Rubio" onclick="capturarSelection('type3');" required>
+                    <input type="radio" class="input4 typeDesign" id="type4" th:src="@{images/avatarSelections/icons/type4.png}" name="type" value="Carbon" onclick="capturarSelection('type4');" required>
+                    <input type="radio" class="input5 typeDesign" id="type5" th:src="@{images/avatarSelections/icons/type5.png}" name="type" value="Simbolo" onclick="capturarSelection('type5');" required>
+                    <input type="radio" class="input6 typeDesign" id="type6" th:src="@{images/avatarSelections/icons/type6.png}" name="type" value="Informatico" onclick="capturarSelection('type6');" required>
                 </div>
 
 
                 <div class="name">
-                    <input type="text" class="input7 type" id="name" name="name" placeholder=" Nombre de usuario" autocomplete="off">
+                    <input type="text" class="input7 type" id="name" name="name" placeholder="Name" autocomplete="off" required>
                 </div>
             </div>
 
@@ -58,7 +58,7 @@
                         var avatar = document.getElementById(id);
                         var avatarSrc = avatar.getAttribute("src");
                         var avatarSelection = document.getElementById("avatar");
-                        avatarSelection.innerHTML = "<img class='avatar' src='" + avatarSrc + "'>";
+                        avatarSelection.innerHTML = "<img class='type' src='" + avatarSrc + "'>";
                     } /* convierte una variable de javascript en una imagen de html en un proceso CREO
                         POR EL MOMENTO, SI SE BORRA LA OTRA FUNCION Y SE DEJA ESTA, AL HACER CLICK SE MUESTRAN LOS ICONOS ¡¡REVISAR!! */
                     /*]]>*/

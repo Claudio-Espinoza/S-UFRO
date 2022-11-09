@@ -11,26 +11,63 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public User ChangeUser(String name, String typeUser) {
+    public void ChangeUser(String name, String typeUser) {
         switch (typeUser) {
             case "PorDefecto":
-                return new User(name, typeUser, "Humilde", "Generico", "Deportivo", "Buzo", "Tenis");
+                saveObjectPorDefecto(name, typeUser);
+                break;
 
             case "Snob": //Es el habin pero no queremos decir que es el habin, pero en efecto... es el habin
-                return new User(name, typeUser, "Anemia", "Nerd", "Pretencioso", "Pantalon", "Formal");
+                saveObjectSnob(name, typeUser);
+                break;
 
             case "Rubio": //Es el benja pero no queremos decir que es el benja, pero en efecto... es el benja
-                return  new User(name, typeUser, "KKK", "Rubio", "Informal", "Jeans", "Comodos");
+                saveObjectRubio(name, typeUser);
+                break;
 
             case "Carbon":
-                return new User(name, typeUser, "Carbon", "Afro", "Chaleco", "Jeans", "Jordan");
+                saveObjectCarbon(name, typeUser);
+                break;
 
             case "Simbolo":
-                return new User(name, typeUser, "Actualizable", "Caotico", "Tuneado", "Disabled", "None");
+                saveObjectSimbolo(name, typeUser);
+                break;
 
             case "Informatico":
-                return new User(name, typeUser, "Anemia", "None", "Poleron", "Buzo", "Desconocido");
+                saveObjectInformatico(name, typeUser);
+                break;
+
         }
-        return new User();
     }
+
+    public void saveObjectSnob(String name, String typeUser){
+        User user = new User(name, typeUser, "Anemia", "Nerd", "Pretencioso", "Pantalon", "Formal", 0, 3);
+        userRepository.save(user);
+    }
+
+    public void saveObjectPorDefecto(String name, String typeUser){
+        User user = new User(name, typeUser, "Humilde", "Generico", "Deportivo", "Buzo", "Tenis", 0, 3);
+        userRepository.save(user);
+    }
+
+    public void saveObjectRubio(String name, String typeUser){
+        User user = new User(name, typeUser, "KKK", "Rubio", "Informal", "Jeans", "Comodos", 0, 3);
+        userRepository.save(user);
+    }
+
+    public void saveObjectCarbon(String name, String typeUser){
+        User user = new User(name, typeUser, "Carbon", "Afro", "Chaleco", "Jeans", "Jordan", 0, 3);
+        userRepository.save(user);
+    }
+
+    public void saveObjectInformatico(String name, String typeUser){
+        User user  = new User(name, typeUser, "Anemia", "None", "Poleron", "Buzo", "Desconocido", 0, 3);
+        userRepository.save(user);
+    }
+
+    public void saveObjectSimbolo(String name, String typeUser){
+        User user = new User(name, typeUser, "Actualizable", "Caotico", "Tuneado", "Disabled", "None", 0, 3);
+        userRepository.save(user);
+    }
+
 }

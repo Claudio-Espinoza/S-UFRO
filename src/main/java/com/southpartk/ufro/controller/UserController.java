@@ -1,6 +1,5 @@
 package com.southpartk.ufro.controller;
 
-import com.southpartk.ufro.model.User;
 import com.southpartk.ufro.repository.UserRepository;
 import com.southpartk.ufro.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +30,8 @@ public class UserController {
     }
 
     @PostMapping("/saveUser")
-    public String save(String type, String name){
-        User user = userService.ChangeUser(name, type);
-        userRepository.save(user);
+    public String save(String type, String name) {
+        userService.ChangeUser(name, type);
         return "redirect:/"; //Cambiar la direccion
     }
 
