@@ -18,16 +18,15 @@ public class Personage {
     private String conduct;
     @Column(length = 20)
     private String temperament;
-    private String age;
+    private int age;
     @Column(length=40)
     private String graduate;
     private int difficulty;
 
-
     @Embedded
     private Preference preference;
 
-    public Personage(String name, String lenient, String conduct, String temperament, String age, String graduate, int difficulty, Preference preference) {
+    public Personage(String name, String lenient, String conduct, String temperament, int age, String graduate, int difficulty, Preference preference) {
         this.name = name;
         this.lenient = lenient;
         this.conduct = conduct;
@@ -36,11 +35,10 @@ public class Personage {
         this.graduate = graduate;
         this.difficulty = difficulty;
         this.preference = preference;
-    }
+}
 
     public Personage() {}
     //---------------//
-
 
     public String getName() {
         return name;
@@ -74,12 +72,20 @@ public class Personage {
         this.temperament = temperament;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
+    }
+
+    public Preference getPreference() {
+        return preference;
+    }
+
+    public void setPreference(Preference preference) {
+        this.preference = preference;
     }
 
     public String getGraduate() {

@@ -36,12 +36,11 @@ public class UserService {
             case "Informatico":
                 saveObjectInformatico(name, typeUser);
                 break;
-
         }
     }
 
     public void saveObjectSnob(String name, String typeUser){
-        User user = new User(name, typeUser, "Anemia", "Nerd", "Pretencioso", "Pantalon", "Formal", 0, 3);
+        User user = new User(name, typeUser, "Anemico", "Nerd", "Pretencioso", "Pantalon", "Formal", 0, 3);
         userRepository.save(user);
     }
 
