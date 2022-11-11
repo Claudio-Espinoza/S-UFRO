@@ -9,16 +9,26 @@ public class AdminService {
     @Autowired
     AdminRepository adminRepository;
 
-    public boolean existsById(String rut) {
-        return adminRepository.existsById(rut);
+    public String existsById(String rut, String password) {
+        if(adminRepository.existsById(rut)){
+            return validationId(rut, password);
+        }else{
+            return "redirect:/credentialsAdmin";
+        }
     }
 
-    public boolean validationId(String rut, String password) {
+
+    public String validationId(String rut, String password) {
         var admin = adminRepository.findById(rut);
         var passwordIdenty= admin.get().getPassword();
-        return passwordIdenty.equals(password);
-
+        if(passwordIdenty.equals(password)){
+            return  "redirect:/adminShowMenu";
+        }else {
+            return "redirect:/credentialsAdmin";
+        }
     }
+
+
 
 
 }
