@@ -11,8 +11,8 @@
 
 <body>
 <div class="container">
-    <div class="audio">
-        <audio th:src="@{sounds/avatarCreation.mp3}" autoplay loop controls ></audio>
+    <div>
+        <audio th:src="@{sounds/avatarCreation.mp3}" autoplay loop></audio>
     </div>
     <form class="form" th:action="@{/saveUser}" method="post" enctype="multipart/form-data">
 
@@ -31,12 +31,12 @@
 
             <div class="option__input--option">
                 <div class="input">
-                    <input type="radio" class="input1 typeDesign" id="type1" th:src="@{images/avatarSelections/icons/type1.png}" name="type" value="PorDefecto" onclick="capturarSelection('type1');" required>
-                    <input type="radio" class="input2 typeDesign" id="type2" th:src="@{images/avatarSelections/icons/type2.png}" name="type" value="Snob" onclick="capturarSelection('type2');" required>
-                    <input type="radio" class="input3 typeDesign" id="type3" th:src="@{images/avatarSelections/icons/type3.png}" name="type" value="Rubio" onclick="capturarSelection('type3');" required>
-                    <input type="radio" class="input4 typeDesign" id="type4" th:src="@{images/avatarSelections/icons/type4.png}" name="type" value="Carbon" onclick="capturarSelection('type4');" required>
-                    <input type="radio" class="input5 typeDesign" id="type5" th:src="@{images/avatarSelections/icons/type5.png}" name="type" value="Simbolo" onclick="capturarSelection('type5');" required>
-                    <input type="radio" class="input6 typeDesign" id="type6" th:src="@{images/avatarSelections/icons/type6.png}" name="type" value="Informatico" onclick="capturarSelection('type6');" required>
+                    <input type="radio" class="input1 typeDesign" id="type1" th:src="@{images/avatarSelections/icons/type1.png}" name="type" value="PorDefecto" onclick="captureSelection('type1');" required>
+                    <input type="radio" class="input2 typeDesign" id="type2" th:src="@{images/avatarSelections/icons/type2.png}" name="type" value="Snob" onclick="captureSelection('type2');" required>
+                    <input type="radio" class="input3 typeDesign" id="type3" th:src="@{images/avatarSelections/icons/type3.png}" name="type" value="Rubio" onclick="captureSelection('type3');" required>
+                    <input type="radio" class="input4 typeDesign" id="type4" th:src="@{images/avatarSelections/icons/type4.png}" name="type" value="Carbon" onclick="captureSelection('type4');" required>
+                    <input type="radio" class="input5 typeDesign" id="type5" th:src="@{images/avatarSelections/icons/type5.png}" name="type" value="Simbolo" onclick="captureSelection('type5');" required>
+                    <input type="radio" class="input6 typeDesign" id="type6" th:src="@{images/avatarSelections/icons/type6.png}" name="type" value="Informatico" onclick="captureSelection('type6');" required>
                 </div>
 
 
@@ -46,25 +46,10 @@
             </div>
 
             <div class="character__submit">
-                <button type="submit" >
+                <button type="submit" onclick="saveSelection()"> <!-- Este guarda la ruta de la imagen que se debe guardar en base de datos para poderla usar -->
                     <img th:src="@{images/saveUserButton.png}" class="character__submit--buttom">
                 </button>
             </div>
-            <!------------------------------- FUNCION DE PRUEBA NO IMPLEMENTADA AUN -------------------------------------------------->
-            <div>
-                <script th:inline="javascript">
-                    /*<![CDATA[*/
-                    function capturar(id) {
-                        var avatar = document.getElementById(id);
-                        var avatarSrc = avatar.getAttribute("src");
-                        var avatarSelection = document.getElementById("avatar");
-                        avatarSelection.innerHTML = "<img class='type' src='" + avatarSrc + "'>";
-                    } /* convierte una variable de javascript en una imagen de html en un proceso CREO
-                        POR EL MOMENTO, SI SE BORRA LA OTRA FUNCION Y SE DEJA ESTA, AL HACER CLICK SE MUESTRAN LOS ICONOS ¡¡REVISAR!! */
-                    /*]]>*/
-                </script>
-            </div>
-            <!--------------------------------------------------------------------------------------------------------------------->
         </div>
     </form>
 </div>
@@ -72,20 +57,22 @@
 </html>
 <!--funcion script que captura seleccion de input desde un formulario html -->
 <script th:inline="javascript">
-    function capturarSelection(valor) {
-        var imageSelection = document.querySelector('.avatar').src = "/images/avatarSelections/avatars/" + valor + ".png";
+    var imageSelection;
+    function captureSelection(valor) {
+        imageSelection = document.querySelector('.avatar').src = "/images/avatarSelections/avatars/" + valor + ".png";
         console.log(imageSelection);
         var selection = document.getElementById(valor).value;
         if (selection == null){
-            console.log("Debe seleccionar un avatar para continuar");
+            alert("Debe seleccionar un avatar para continuar");
         }else{
-            alert("Avatar seleccionado: " + selection);
+            console.log("Avatar seleccionado: " + selection);
         }
-        return imageSelection;
-        //retorna un valor String de la imagen seleccionada, lo cual podriamos poner en la base(las url de las imagenes) de datos
-        // para luego mostrarlo en el perfil del usuario y acceder a el desde el controlador de usuario para mostrarlo en el juego.
     }
-
+    /*guardar seleccion en una variable y retornarla como ruta*/
+    function saveSelection() {
+        var seleccion = imageSelection;
+        return seleccion;
+    }
     function joke(){
         let sound = new Audio('/sounds/laughs.mp3');
         sound.play();
