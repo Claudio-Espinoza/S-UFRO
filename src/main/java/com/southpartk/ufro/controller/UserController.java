@@ -31,8 +31,8 @@ public class UserController {
 
     @PostMapping("/saveUser")
     public String save(String type, String name) {
-        userService.ChangeUser(name, type);
-        return "redirect:/"; //Cambiar la direccion
+       userService.selectionCharacter(name, type);
+        return "redirect:/"; //Cambiar la direccion,
     }
 
     @GetMapping("/deleteUser/{nombre}")

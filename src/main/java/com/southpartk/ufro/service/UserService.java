@@ -5,68 +5,48 @@ import com.southpartk.ufro.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.*;
+
 
 @Service
 public class UserService {
     @Autowired
     UserRepository userRepository;
-
-    public void ChangeUser(String name, String typeUser) {
-        switch (typeUser) {
-            case "PorDefecto":
-                saveObjectPorDefecto(name, typeUser);
-                break;
-
-            case "Snob": //Es el habin pero no queremos decir que es el habin, pero en efecto... es el habin
-                saveObjectSnob(name, typeUser);
-                break;
-
-            case "Rubio": //Es el benja pero no queremos decir que es el benja, pero en efecto... es el benja
-                saveObjectRubio(name, typeUser);
-                break;
-
-            case "Carbon":
-                saveObjectCarbon(name, typeUser);
-                break;
-
-            case "Simbolo":
-                saveObjectSimbolo(name, typeUser);
-                break;
-
-            case "Informatico":
-                saveObjectInformatico(name, typeUser);
-                break;
-        }
+    private void saveCharacter(Map user, String typeUser){
+        var userSave = (User)user.get(typeUser);
+        userRepository.save(userSave);
     }
-
-    public void saveObjectSnob(String name, String typeUser){
-        User user = new User(name, typeUser, "Anemico", "Nerd", "Pretencioso", "Pantalon", "Formal", 0, 3);
-        userRepository.save(user);
+    public void selectionCharacter(String name, String typeUser){
+        var userCharacter = createCharacter(name);
+        saveCharacter(userCharacter,typeUser);
     }
-
-    public void saveObjectPorDefecto(String name, String typeUser){
-        User user = new User(name, typeUser, "Humilde", "Generico", "Deportivo", "Buzo", "Tenis", 0, 3);
-        userRepository.save(user);
+    private Map<String, User> createCharacter(String name){
+        Map<String, User> userPersonage = new HashMap<>();
+        userPersonage.put("Snob",saveObjectSnob(name));
+        userPersonage.put("PorDefecto",saveObjectPorDefecto(name));
+        userPersonage.put("Rubio",saveObjectRubio(name));
+        userPersonage.put("Carbon",saveObjectCarbon(name));
+        userPersonage.put("Informatico",saveObjectInformatico(name));
+        userPersonage.put("Simbolo",saveObjectSimbolo(name));
+        return userPersonage;
     }
-
-    public void saveObjectRubio(String name, String typeUser){
-        User user = new User(name, typeUser, "KKK", "Rubio", "Informal", "Jeans", "Comodos", 0, 3);
-        userRepository.save(user);
+    private User saveObjectSnob(String name){
+        return new User(name, "Snob", "Anemico", "Nerd", "Pretencioso", "Pantalon", "Formal", 0, 3);
     }
-
-    public void saveObjectCarbon(String name, String typeUser){
-        User user = new User(name, typeUser, "Carbon", "Afro", "Chaleco", "Jeans", "Jordan", 0, 3);
-        userRepository.save(user);
+    private User saveObjectPorDefecto(String name){
+        return new  User(name, "PorDefecto", "Humilde", "Generico", "Deportivo", "Buzo", "Tenis", 0, 3);
     }
-
-    public void saveObjectInformatico(String name, String typeUser){
-        User user  = new User(name, typeUser, "Anemia", "None", "Poleron", "Buzo", "Desconocido", 0, 3);
-        userRepository.save(user);
+    private User saveObjectRubio(String name){
+        return new  User(name, "Rubio", "KKK", "Rubio", "Informal", "Jeans", "Comodos", 0, 3);
     }
-
-    public void saveObjectSimbolo(String name, String typeUser){
-        User user = new User(name, typeUser, "Actualizable", "Caotico", "Tuneado", "Disabled", "None", 0, 3);
-        userRepository.save(user);
+    private User saveObjectCarbon(String name){
+        return new User(name, "Carbon" , "Carbon", "Afro", "Chaleco", "Jeans", "Jordan", 0, 3);
+    }
+    private User saveObjectInformatico(String name){
+        return new  User(name, "Informatico", "Anemia", "None", "Poleron", "Buzo", "Desconocido", 0, 3);
+    }
+    private User saveObjectSimbolo(String name){
+        return new User(name, "Simbolo", "Actualizable", "Caotico", "Tuneado", "Disabled", "None", 0, 3);
     }
 
 }

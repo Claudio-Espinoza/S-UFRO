@@ -6,7 +6,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Point {
-
     @Id
     @Column(nullable=false, unique = true)
     private Integer nivel;

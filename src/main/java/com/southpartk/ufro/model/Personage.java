@@ -7,8 +7,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Personage {
-
-    //-|Atributos de Identificador-|//
     @Id
     @Column(length = 40, nullable = false, unique = true)
     private String name;

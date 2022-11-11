@@ -27,8 +27,6 @@ public class User {
     public User() {
     }
 
-
-
     //Constructor con el fin de modificar los item no escenciales y poder guardarlos sin modificar los otros elementos UwU
     public User(String name, String type, String skin, String typeHair, String typeTop, String typeButton, String typeShoe, int points, int life) {
         this.name = name;
@@ -114,4 +112,5 @@ public class User {
     public void setLife(int life) {
         this.life = life;
     }
+
 }
