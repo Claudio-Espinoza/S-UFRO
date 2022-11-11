@@ -1,8 +1,12 @@
 package com.southpartk.ufro.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
+
 public class User {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
@@ -40,77 +44,6 @@ public class User {
         this.life = life;
     }
 
-    //-|Getter y Setter|----------------------------------------------------------------------------------------------//
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getTypeHair() {
-        return typeHair;
-    }
-
-    public void setTypeHair(String typeHair) {
-        this.typeHair = typeHair;
-    }
-
-    public String getSkin() {
-        return skin;
-    }
-
-    public void setSkin(String skin) {
-        this.skin = skin;
-    }
-
-    public String getTypeTop() {
-        return typeTop;
-    }
-
-    public void setTypeTop(String typeTop) {
-        this.typeTop = typeTop;
-    }
-
-    public String getTypeButton() {
-        return typeButton;
-    }
-
-    public void setTypeButton(String typeButton) {
-        this.typeButton = typeButton;
-    }
-
-    public String getTypeShoe() {
-        return typeShoe;
-    }
-
-    public void setTypeShoe(String typeShoe) {
-        this.typeShoe = typeShoe;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
-    public int getLife() {
-        return life;
-    }
-
-    public void setLife(int life) {
-        this.life = life;
-    }
 
 }

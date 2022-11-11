@@ -1,11 +1,14 @@
 package com.southpartk.ufro.model;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+@Data
 public class Personage {
     @Id
     @Column(length = 40, nullable = false, unique = true)
@@ -38,67 +41,4 @@ public class Personage {
     public Personage() {}
     //---------------//
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLenient() {
-        return lenient;
-    }
-
-    public void setLenient(String lenient) {
-        this.lenient = lenient;
-    }
-
-    public String getConduct() {
-        return conduct;
-    }
-
-    public void setConduct(String conduct) {
-        this.conduct = conduct;
-    }
-
-    public String getTemperament() {
-        return temperament;
-    }
-
-    public void setTemperament(String temperament) {
-        this.temperament = temperament;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public Preference getPreference() {
-        return preference;
-    }
-
-    public void setPreference(Preference preference) {
-        this.preference = preference;
-    }
-
-    public String getGraduate() {
-        return graduate;
-    }
-
-    public void setGraduate(String graduate) {
-        this.graduate = graduate;
-    }
-
-    public int getDifficulty() {
-        return difficulty;
-    }
-
-    public void setDifficulty(int difficulty) {
-        this.difficulty = difficulty;
-    }
 }
