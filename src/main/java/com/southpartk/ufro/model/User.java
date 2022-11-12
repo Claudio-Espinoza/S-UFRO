@@ -27,6 +27,8 @@ public class User {
     private String typeButton;
     @Column(length=20, nullable=false)
     private String typeShoe;
+    @Column(length=40)
+    private String img;
     private int points;
     private int life;
 
@@ -35,7 +37,9 @@ public class User {
     }
 
     //Constructor con el fin de modificar los item no escenciales y poder guardarlos sin modificar los otros elementos UwU
-    public User(String name, String type, String skin, String typeHair, String typeTop, String typeButton, String typeShoe, int points, int life) {
+
+
+    public User(String name, String type, String skin, String typeHair, String typeTop, String typeButton, String typeShoe, int points, int life, String img) {
         this.name = name;
         this.type = type;
         this.skin = skin;
@@ -43,10 +47,8 @@ public class User {
         this.typeTop = typeTop;
         this.typeButton = typeButton;
         this.typeShoe = typeShoe;
+        this.img = img;
         this.points = points;
         this.life = life;
     }
-
-
-
 }

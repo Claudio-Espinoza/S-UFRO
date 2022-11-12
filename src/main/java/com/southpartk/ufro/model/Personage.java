@@ -31,6 +31,5 @@ public class Personage {
     private Preference preference;
 
     public Personage() {}
-    //---------------//
 
 }
