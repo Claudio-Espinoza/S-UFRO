@@ -13,7 +13,7 @@ public class AdminService {
         if(adminRepository.existsById(rut)){
             return validationId(rut, password);
         }else{
-            return "redirect:/credentialsAdmin";
+            return "redirect:/accreditAdmin";
         }
     }
 
@@ -24,7 +24,7 @@ public class AdminService {
         if(passwordIdenty.equals(password)){
             return  "redirect:/adminShowMenu";
         }else {
-            return "redirect:/credentialsAdmin";
+            return "redirect:/accreditAdmin";
         }
     }
 
