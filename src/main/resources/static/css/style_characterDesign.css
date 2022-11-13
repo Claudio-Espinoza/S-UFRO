@@ -43,8 +43,8 @@ input[type="radio"]:checked
 }
 /*-----------------------------------------------------------------------------------------------------------*/
 .avatar{
-    width: auto;
-    height: auto;
+    margin-top: 4vh;
+    width: 45%;
 }
 .container{
     width: 100vw;
@@ -72,12 +72,6 @@ input[type="radio"]:checked
     width: 8vw;
     height: 10vh;
 }
-/*
-.option__input--option{
-    display: flexbox;
-}
-
- */
 
 .option__img{
     margin-left: 32.2vw;
