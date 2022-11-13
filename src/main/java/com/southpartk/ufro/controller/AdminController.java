@@ -32,8 +32,8 @@ public class AdminController {
     }
 
     //-|Ver el panel validaor del administrador|-//
-    @GetMapping("/credentialsAdmin")
-    public String credentialsAdmin() {
+    @GetMapping("/accreditAdmin")
+    public String accreditAdmin() {
         return "credentials/LoginCredentialsAdmin";
     }
 
