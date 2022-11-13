@@ -1,8 +1,15 @@
 package com.southpartk.ufro.model;
 
-import javax.persistence.*; //code smells
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
+@Setter
+@Getter
 public class Admin {
     //-|Atributos|----------------------------------------------------------------------------------------------------//
     @Id
@@ -22,19 +29,5 @@ public class Admin {
     }
 
     //-|getter/Setter|-----------------------------------------------------------------------------------------------------//
-    public String getRut() {
-        return rut;
-    }
 
-    public void setRut(String rut) {
-        this.rut = rut;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
