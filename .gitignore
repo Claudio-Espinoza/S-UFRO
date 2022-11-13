@@ -33,3 +33,6 @@ build/
 .vscode/
 src/main/resources/application.properties
 src/main/resources/application.properties
+src/main/java/com/southpartk/ufro/model/Admin.java
+src/main/java/com/southpartk/ufro/model/Point.java
+src/main/java/com/southpartk/ufro/model/Point.java

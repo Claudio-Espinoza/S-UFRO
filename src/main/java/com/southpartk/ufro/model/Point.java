@@ -24,7 +24,7 @@ public class Point {
         this.victoryPoints = victoryPoints;
         this.endGamePoints = endGamePoints;
     }
-
+ 
     public int getNivel() {
         return nivel;
     }

@@ -1,6 +1,6 @@
 package com.southpartk.ufro.model;
 
-import javax.persistence.*;
+import javax.persistence.*; //code smells
 
 @Entity
 public class Admin {
