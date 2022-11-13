@@ -1,16 +1,11 @@
 package com.southpartk.ufro.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-@Getter
-@Setter
 public class Personage {
     @Id
     @Column(length = 40, nullable = false, unique = true)
@@ -21,15 +16,89 @@ public class Personage {
     private String conduct;
     @Column(length = 20)
     private String temperament;
+    private int age;
     @Column(length=40)
     private String graduate;
-
-    private int age;
     private int difficulty;
 
     @Embedded
     private Preference preference;
 
-    public Personage() {}
+    public Personage(String name, String lenient, String conduct, String temperament, int age, String graduate, int difficulty, Preference preference) {
+        this.name = name;
+        this.lenient = lenient;
+        this.conduct = conduct;
+        this.temperament = temperament;
+        this.age = age;
+        this.graduate = graduate;
+        this.difficulty = difficulty;
+        this.preference = preference;
+}
 
+    public Personage() {}
+    //---------------//
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLenient() {
+        return lenient;
+    }
+
+    public void setLenient(String lenient) {
+        this.lenient = lenient;
+    }
+
+    public String getConduct() {
+        return conduct;
+    }
+
+    public void setConduct(String conduct) {
+        this.conduct = conduct;
+    }
+
+    public String getTemperament() {
+        return temperament;
+    }
+
+    public void setTemperament(String temperament) {
+        this.temperament = temperament;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Preference getPreference() {
+        return preference;
+    }
+
+    public void setPreference(Preference preference) {
+        this.preference = preference;
+    }
+
+    public String getGraduate() {
+        return graduate;
+    }
+
+    public void setGraduate(String graduate) {
+        this.graduate = graduate;
+    }
+
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
+    }
 }

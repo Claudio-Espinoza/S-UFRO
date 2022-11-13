@@ -30,8 +30,7 @@ public class UserController {
     }
 
     @PostMapping("/saveUser")
-    public String save(String type, String name, String img) {
-        System.out.println(img);
+    public String save(String type, String name) {
        userService.selectionCharacter(name, type);
         return "redirect:/"; //Cambiar la direccion,
     }

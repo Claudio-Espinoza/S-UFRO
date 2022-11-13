@@ -1,13 +1,8 @@
 /*--||General||----------------------------------------------------------------------------------------------*/
 * {
     font-family: monospace;
-    margin: 0;
-    padding: 0;
-}
-
-.especial_type{
-    opacity: 0;
-    appearance: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 input[type="radio"] {
@@ -48,8 +43,8 @@ input[type="radio"]:checked
 }
 /*-----------------------------------------------------------------------------------------------------------*/
 .avatar{
-    margin-top: 4vh;
-    width: 45%;
+    width: auto;
+    height: auto;
 }
 .container{
     width: 100vw;
@@ -77,6 +72,12 @@ input[type="radio"]:checked
     width: 8vw;
     height: 10vh;
 }
+/*
+.option__input--option{
+    display: flexbox;
+}
+
+ */
 
 .option__img{
     margin-left: 32.2vw;

@@ -31,22 +31,22 @@ public class UserService {
         return userPersonage;
     }
     private User saveObjectSnob(String name){
-        return new User(name, "Snob", "Anemico", "Nerd", "Pretencioso", "Pantalon", "Formal", 0, 3, "images/avatarSelections/icons/type2.png");
+        return new User(name, "Snob", "Anemico", "Nerd", "Pretencioso", "Pantalon", "Formal", 0, 3);
     }
     private User saveObjectPorDefecto(String name){
-        return new  User(name, "PorDefecto", "Humilde", "Generico", "Deportivo", "Buzo", "Tenis", 0, 3, "images/avatarSelections/icons/type1.png");
+        return new  User(name, "PorDefecto", "Humilde", "Generico", "Deportivo", "Buzo", "Tenis", 0, 3);
     }
     private User saveObjectRubio(String name){
-        return new  User(name, "Rubio", "KKK", "Rubio", "Informal", "Jeans", "Comodos", 0, 3, "images/avatarSelections/icons/type3.png");
+        return new  User(name, "Rubio", "KKK", "Rubio", "Informal", "Jeans", "Comodos", 0, 3);
     }
     private User saveObjectCarbon(String name){
-        return new User(name, "Carbon" , "Carbon", "Afro", "Chaleco", "Jeans", "Jordan", 0, 3, "images/avatarSelections/icons/type4.png");
+        return new User(name, "Carbon" , "Carbon", "Afro", "Chaleco", "Jeans", "Jordan", 0, 3);
     }
     private User saveObjectInformatico(String name){
-        return new  User(name, "Informatico", "Anemia", "None", "Poleron", "Buzo", "Desconocido", 0, 3, "images/avatarSelections/icons/type6.png");
+        return new  User(name, "Informatico", "Anemia", "None", "Poleron", "Buzo", "Desconocido", 0, 3);
     }
     private User saveObjectSimbolo(String name){
-        return new User(name, "Simbolo", "Actualizable", "Caotico", "Tuneado", "Disabled", "None", 0, 3, "images/avatarSelections/icons/type5.png");
+        return new User(name, "Simbolo", "Actualizable", "Caotico", "Tuneado", "Disabled", "None", 0, 3);
     }
 
 }

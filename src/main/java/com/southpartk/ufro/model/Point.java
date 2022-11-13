@@ -1,15 +1,10 @@
 package com.southpartk.ufro.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-@Getter
-@Setter
 public class Point {
     @Id
     @Column(nullable=false, unique = true)
@@ -29,13 +24,44 @@ public class Point {
         this.victoryPoints = victoryPoints;
         this.endGamePoints = endGamePoints;
     }
-<<<<<<< HEAD
  
     public int getNivel() {
         return nivel;
     }
-=======
 
->>>>>>> f7befb717b2ff6b2c6f23bdfe73115b9ce51e80d
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
 
+    public int getCorrectPoints() {
+        return correctPoints;
+    }
+
+    public void setCorrectPoints(int correctPoints) {
+        this.correctPoints = correctPoints;
+    }
+
+    public int getErrorPoints() {
+        return errorPoints;
+    }
+
+    public void setErrorPoints(int errorPoints) {
+        this.errorPoints = errorPoints;
+    }
+
+    public int getVictoryPoints() {
+        return victoryPoints;
+    }
+
+    public void setVictoryPoints(int victoryPoints) {
+        this.victoryPoints = victoryPoints;
+    }
+
+    public int getEndGamePoints() {
+        return endGamePoints;
+    }
+
+    public void setEndGamePoints(int endGamePoints) {
+        this.endGamePoints = endGamePoints;
+    }
 }

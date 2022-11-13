@@ -68,12 +68,14 @@
             console.log("Avatar seleccionado: " + selection);
         }
     }
+    /*guardar seleccion en una variable y retornarla como ruta*/
+    function saveSelection() {
+        var seleccion = imageSelection;
+        return seleccion;
+    }
     function joke(){
-        let texto = "No amigo, se equivoco... Eso esta en civil XDDDDDDDDDDDDDDDDDDDDDDD"
-        const hablar = (texto) => speechSynthesis.speak(new SpeechSynthesisUtterance(texto))
-        hablar(texto)
-        setTimeout(() => {
-            console.log(document.getSelection().toString())
-        }, 3000)
+        let sound = new Audio('/sounds/laughs.mp3');
+        sound.play();
+        alert("JAJA PERO SI NO HAY NADA DE ESO AQUI");
     }
 </script>
