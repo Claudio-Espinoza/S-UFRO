@@ -22,12 +22,10 @@ class UserControllerTest {
     }
     @Test
     void starInitianRutaTest() {
-        assertEquals("credentials/InitianPage", new UserController().starInitian());
     }
 
     @Test
     void createCharacterRutaTest() {
-        assertEquals("character/DesignCharacter", new UserController().createCharacter());
     }
 
     @Test

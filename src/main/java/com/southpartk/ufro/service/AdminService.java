@@ -1,6 +1,8 @@
 package com.southpartk.ufro.service;
 
+import com.southpartk.ufro.model.User;
 import com.southpartk.ufro.repository.AdminRepository;
+import com.southpartk.ufro.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -8,8 +10,11 @@ public class AdminService {
 
     private final AdminRepository adminRepository;
 
-    public AdminService(AdminRepository adminRepository) {
+    private final UserRepository userRepository;
+
+    public AdminService(AdminRepository adminRepository, UserRepository userRepository) {
         this.adminRepository = adminRepository;
+        this.userRepository = userRepository;
     }
 
     public String existsById(String rut, String password) {
@@ -30,6 +35,9 @@ public class AdminService {
         }
     }
 
+    public Iterable<User> findByAll(){
+        return userRepository.findAll();
+    }
 
 
 
