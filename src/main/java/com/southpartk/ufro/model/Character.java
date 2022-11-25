@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Entity
 @Setter
 @Getter
-public class Personage {
+public class Character {
     @Id
     @Column(length = 40, nullable = false, unique = true)
     private String name;
@@ -29,5 +29,5 @@ public class Personage {
     @Embedded
     private Preference preference;
 
-    public Personage() {}
+    public Character() {}
 }
