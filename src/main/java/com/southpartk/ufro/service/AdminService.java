@@ -1,12 +1,12 @@
 package com.southpartk.ufro.service;
 
 import com.southpartk.ufro.repository.AdminRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AdminService {
-    final AdminRepository adminRepository;
+
+    private final AdminRepository adminRepository;
 
     public AdminService(AdminRepository adminRepository) {
         this.adminRepository = adminRepository;
@@ -19,7 +19,6 @@ public class AdminService {
             return "redirect:/credentialsAdmin";
         }
     }
-
 
     public String validationId(String rut, String password) {
         var admin = adminRepository.findById(rut);

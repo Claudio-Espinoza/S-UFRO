@@ -15,9 +15,7 @@ import static org.mockito.Mockito.mock;
 @Tag("Pruebas de AdminController")
 public class AdminControllerTest {
 
-    UserRepository userRepository;
-    AdminService adminService;
-    Model model;
+
 
     @BeforeAll
     public void init() {
