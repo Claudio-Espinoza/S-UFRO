@@ -16,6 +16,11 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public void deleteByIdUser(String nombre){
+        userRepository.deleteById(nombre);
+    }
+
+
     private void saveCharacter(Map user, String typeUser){
         var userSave = (User)user.get(typeUser);
         userRepository.save(userSave);
