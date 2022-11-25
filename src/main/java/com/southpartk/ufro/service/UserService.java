@@ -10,8 +10,13 @@ import java.util.Map;
 
 @Service
 public class UserService {
-    @Autowired
-    UserRepository userRepository;
+
+    private final UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     private void saveCharacter(Map user, String typeUser){
         var userSave = (User)user.get(typeUser);
         userRepository.save(userSave);

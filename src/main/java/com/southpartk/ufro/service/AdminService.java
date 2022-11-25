@@ -6,8 +6,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AdminService {
-    @Autowired
-    AdminRepository adminRepository;
+    final AdminRepository adminRepository;
+
+    public AdminService(AdminRepository adminRepository) {
+        this.adminRepository = adminRepository;
+    }
 
     public String existsById(String rut, String password) {
         if(adminRepository.existsById(rut)){
