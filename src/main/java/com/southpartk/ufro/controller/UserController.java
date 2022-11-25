@@ -18,7 +18,6 @@ public class UserController {
     @Autowired //Esto no se puede borrar, se rompe xd
     private UserService userService;
 
-
     @GetMapping("")
     public String starInitian(){
         return "credentials/InitianPage";
