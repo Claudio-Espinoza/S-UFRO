@@ -16,8 +16,7 @@ public class AdminController {
     private UserRepository userRepository;
     @Autowired
     private AdminService adminService;
-
-
+    
     //-|Ver el panel principal del administrador|-//
     @GetMapping("/adminChattelShow")
     public String showAdmin(Model model) {

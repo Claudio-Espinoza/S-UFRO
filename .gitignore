@@ -38,3 +38,4 @@ src/main/java/com/southpartk/ufro/model/Point.java
 src/main/java/com/southpartk/ufro/model/Point.java
 src/main/resources/application.properties
 src/main/resources/application.properties
+src/main/java/com/southpartk/ufro/controller/AdminController.java
