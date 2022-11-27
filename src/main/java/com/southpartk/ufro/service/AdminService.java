@@ -16,6 +16,8 @@ public class AdminService {
         this.userRepository = userRepository;
     }
 
+
+
     public boolean existsById(String rut) {
         return adminRepository.existsById(rut);
     }
