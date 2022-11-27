@@ -1,6 +1,5 @@
 package com.southpartk.ufro.service;
 
-import com.southpartk.ufro.repository.AdminRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -13,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AdminServiceTest {
     @Autowired
     private AdminService adminService;
-    
+
     @ParameterizedTest(name = "#{index} - rut: {0}")
     @ValueSource(strings = {"207542628"})
     @DisplayName("existsByIdTest - Con rut correctos")
