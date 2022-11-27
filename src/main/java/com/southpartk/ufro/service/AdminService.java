@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 public class AdminService {
 
     private final AdminRepository adminRepository;
-
     private final UserRepository userRepository;
 
     public AdminService(AdminRepository adminRepository, UserRepository userRepository) {
@@ -17,28 +16,29 @@ public class AdminService {
         this.userRepository = userRepository;
     }
 
-    public String existsById(String rut, String password) {
-        if(adminRepository.existsById(rut)){
-            return validationId(rut, password);
-        }else{
-            return "redirect:/credentialsAdmin";
-        }
+    public boolean existsById(String rut) {
+        return adminRepository.existsById(rut);
     }
 
-    public String validationId(String rut, String password) {
+    public boolean validationPassword(String rut, String password) {
+        return getPassword(rut).equals(password);
+    }
+
+    private String getPassword(String rut){
         var admin = adminRepository.findById(rut);
-        var passwordIdenty= admin.get().getPassword();
-        if(passwordIdenty.equals(password)){
-            return  "redirect:/adminShowMenu";
-        }else {
-            return "redirect:/credentialsAdmin";
+        return admin.get().getPassword();
+    }
+
+
+    public String redirectionWithPassword(String rut, String password){
+        if(validationPassword(rut, password)){
+            return "admin/Menu";
+        }else{
+            return "redirect:/credentials/LoginCredentialsAdmin";
         }
     }
 
     public Iterable<User> findByAll(){
         return userRepository.findAll();
     }
-
-
-
 }

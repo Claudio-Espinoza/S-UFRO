@@ -39,7 +39,11 @@ public class AdminController {
     //-|Validar administrador|-//
     @PostMapping("/validationAdmin")
     public String validationAdmin(String rut, String password) {
-        return adminService.existsById(rut, password);
+        if(adminService.existsById(rut)){
+            return adminService.redirectionWithPassword(rut, password);
+        }else{
+            return "redirect:/credentials/LoginCredentialsAdmin";
+        }
     }
 
 }
