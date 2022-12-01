@@ -19,14 +19,23 @@ IDE(Base de datos): _Worbench MySql_
 
   **Proceso:**
       1. Clonar el archivo desde el repositorio
+      
       2. Crear una schema en MySql Worbench
+      
         2.1 El nombre de la Schema creada debe ser "sufro" (todo en minusculas)
+        
         ![image](https://user-images.githubusercontent.com/81695948/205153302-225e59ca-49ed-4ee6-8da2-595590f9e9ac.png)
+        
       3. Abrir el archivo clonado
+      
       4. Esperar a que carguen las dependencias
+      
       5. Ejecutar el main
+      
       6. Abrir un buscador
+      
       7. En la barra de busqueda escribir "localhost:8080"
+      
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
