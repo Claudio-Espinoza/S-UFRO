@@ -5,7 +5,7 @@ _Es un juego de toma de deciones ambientado en la carrera de ingenieria en infor
 [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-Idioma: Español|**Ingles**
+Idioma: Español|**Inglés**
 
 ### Pre-requisitos 📋
 
