@@ -5,14 +5,13 @@ _Es un juego de toma de deciones ambientado en la carrera de ingenieria en infor
 [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-_Idioma: Español|Ingles_
+Idioma: Español|**Ingles**
+
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-```
-Da un ejemplo
-```
+**IDE:** _Intellij_
+**JDK:** _17_
+**IDE(Base de datos):** _Worbench MySql_
 
 ### Instalación 🔧
 
