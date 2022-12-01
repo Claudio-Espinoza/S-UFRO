@@ -49,23 +49,19 @@ _Al usar JUnit5, necesitamos de el suit para hacer un despliegue de las pruebas 
 
 ## Construido con 🛠️
 
-* [Java](https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/300px-Java_programming_language_logo.svg.png) - El framework web usado
-* [Spring Boot](https://maven.apache.org/) - Manejador de dependencias
-* [CSS](https://rometools.github.io/rome/) - Usado para generar RSS
-* [Js](https://rometools.github.io/rome/) - Usado para generar RSS
-* [Html](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Java]         - Lenguaje base
+* [Spring Boot]  - FrameWork
+* [Html]         - El maquetado de la pagina
+* [CSS]          - Creacion de los estilos
+* [JS]           - La creacion de funcionalidades
 
 ## Contribuyendo 🖇️
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+[CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/Claudio-Espinoza/S-UFRO/tags).
 
 ## Autores ✒️
 
