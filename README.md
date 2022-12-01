@@ -20,56 +20,40 @@ IDE(Base de datos): _Worbench MySql_
   **Proceso:**
       1. Clonar el archivo desde el repositorio
       
-      2. Crear una schema en MySql Worbench
+      2. Abrir Worbench
       
-        2.1 El nombre de la Schema creada debe ser "sufro" (todo en minusculas)
+        2.1 Crear una schema en MySql Worbench      
+
+        2.2 El nombre de la Schema creada debe ser "sufro" (todo en minusculas)
         
-        ![image](https://user-images.githubusercontent.com/81695948/205153302-225e59ca-49ed-4ee6-8da2-595590f9e9ac.png)
+        2.3 Se aplica los cambios
         
       3. Abrir el archivo clonado
       
       4. Esperar a que carguen las dependencias
       
+        4.1 Acepte el plugin de JPA (No es necesario configurarlo)
+      
       5. Ejecutar el main
       
       6. Abrir un buscador
       
-      7. En la barra de busqueda escribir "localhost:8080"
+        6.1 En la barra de busqueda escribir "localhost:8080"
       
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+_En el caso de encontrar error, vea el worbench puesto que un error de intalación del worbench puede probocar muchos problemas_
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
+_Al usar JUnit5, necesitamos de el suit para hacer un despliegue de las pruebas unitarias del proyecto, por lo que tendra que hacer las pruebas por clases_
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Java](https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/300px-Java_programming_language_logo.svg.png) - El framework web usado
+* [Spring Boot](https://maven.apache.org/) - Manejador de dependencias
+* [CSS](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Js](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Html](https://rometools.github.io/rome/) - Usado para generar RSS
 
 ## Contribuyendo 🖇️
 
