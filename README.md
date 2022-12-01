@@ -18,11 +18,12 @@ IDE(Base de datos): _Worbench MySql_
 ### Instalación 🔧
 
   **Proceso:**
+  
       1. Clonar el archivo desde el repositorio
       
-      2. Abrir Worbench
+      2. Abrir Workbench
       
-        2.1 Crear una schema en MySql Worbench      
+        2.1 Crear una schema en MySql Workbench      
 
         2.2 El nombre de la Schema creada debe ser "sufro" (todo en minusculas)
         
