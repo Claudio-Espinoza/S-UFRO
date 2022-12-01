@@ -17,9 +17,9 @@ IDE(Base de datos): _Worbench MySql_
 
 ### Instalación 🔧
   
-      1. Clonar el archivo desde el repositorio
+      1. Clonar el archivo desde el repositorio de GitHub
       
-      2. Abrir Workbench
+      2. Instalar/Abrir Workbench
       
         2.1 Crear una schema en MySql Workbench      
 
@@ -27,7 +27,7 @@ IDE(Base de datos): _Worbench MySql_
         
         2.3 Se aplica los cambios
         
-      3. Abrir el archivo clonado
+      3. Abrir el archivo clonado con Intellij
       
       4. Esperar a que carguen las dependencias
       
@@ -50,9 +50,9 @@ _Al usar JUnit5, necesitamos de el suit para hacer un despliegue de las pruebas 
 
 * [Java]         - Lenguaje base
 * [Spring Boot]  - FrameWork
-* [Html]         - El maquetado de la pagina
-* [CSS]          - Creacion de los estilos
-* [JS]           - La creacion de funcionalidades
+* [Html]         - El maquetado de la pagina web
+* [CSS]          - Creacion de los estilos web
+* [JS]           - La creacion de funcionalidades web
 
 ## Autores ✒️
 
