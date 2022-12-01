@@ -9,11 +9,11 @@ Idioma: Español|**Ingles**
 
 ### Pre-requisitos 📋
 
-**IDE:** _Intellij_
+*IDE:* _Intellij_
 
-**JDK:** _17_
+*JDK:* _17_
 
-**IDE(Base de datos):** _Worbench MySql_
+*IDE(Base de datos):* _Worbench MySql_
 
 ### Instalación 🔧
 
