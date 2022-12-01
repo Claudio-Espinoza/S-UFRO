@@ -16,8 +16,6 @@ JDK: _17_
 IDE(Base de datos): _Worbench MySql_
 
 ### Instalación 🔧
-
-  **Proceso:**
   
       1. Clonar el archivo desde el repositorio
       
@@ -42,7 +40,7 @@ IDE(Base de datos): _Worbench MySql_
         6.1 En la barra de busqueda escribir "localhost:8080"
       
 
-_En el caso de encontrar error, vea el worbench puesto que un error de intalación del worbench puede probocar muchos problemas_
+_En el caso de encontrar error, vea el worbench puesto que un error de intalación del workbench puede probocar muchos problemas_
 
 ## Ejecutando las pruebas ⚙️
 
@@ -58,8 +56,8 @@ _Al usar JUnit5, necesitamos de el suit para hacer un despliegue de las pruebas 
 
 ## Autores ✒️
 
-* **Claudio Espinoza Navas** - *Programar/Documentar* - (https://github.com/MarcoCaceresSenn)
-* **Marco Caceres Senn** - *Programar/Documentar* - (https://github.com/Claudio-Espinoza)
+* **Claudio Espinoza Navas** - *Programar/Documentar* - (https://github.com/Claudio-Espinoza)
+* **Marco Caceres Senn** - *Programar/Documentar* - (https://github.com/MarcoCaceresSenn)
 
 Contribuidores: 
 (https://github.com/Claudio-Espinoza/S-UFRO/contributors)
