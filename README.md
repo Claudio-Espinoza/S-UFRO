@@ -1,4 +1,4 @@
-# South Park - Ufro (S-UFRO)
+# South Park - UFRO (S-UFRO)
 
 _Es un juego de toma de deciones ambientado en la carrera de ingenieria en informatica de la ufro con una tematica de South Park_
 
