@@ -40,3 +40,4 @@ src/main/resources/application.properties
 src/main/resources/application.properties
 src/main/java/com/southpartk/ufro/controller/AdminController.java
 src/main/resources/application.properties
+src/main/resources/templates/character/DesignCharacter.html
