@@ -9,7 +9,7 @@
     <title>Avatar Creation</title>
 </head>
 
-<body>
+<body th:action="@{/StartTimer}">
 <div class="container">
     <div>
         <audio th:src="@{sounds/avatarCreation.mp3}" autoplay loop></audio>
@@ -46,7 +46,7 @@
             </div>
 
             <div class="character__submit">
-                <button type="submit" onclick="saveSelection()"> <!-- Este guarda la ruta de la imagen que se debe guardar en base de datos para poderla usar -->
+                <button type="submit" onclick="saveSelection()" th:action="@{/StopTimer}"> <!-- Este guarda la ruta de la imagen que se debe guardar en base de datos para poderla usar -->
                     <img th:src="@{images/saveUserButton.png}" class="character__submit--buttom">
                 </button>
             </div>
@@ -74,9 +74,5 @@
         return seleccion;
     }
     function joke(){
-        let sound = new Audio('/sounds/laughs.mp3');
-        sound.play();
-        alert("JAJA PERO SI NO HAY NADA DE ESO AQUI");
     }
-    /* joke va a ser la funcionalidad agregada */
 </script>
