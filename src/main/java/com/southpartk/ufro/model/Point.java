@@ -14,10 +14,8 @@ public class Point {
     @Id
     @Column(nullable=false, unique = true)
     private Integer nivel;
-    private int correctPoints;
-    private int errorPoints;
+    private int points;
     private int victoryPoints;
-    private int endGamePoints;
 
     public Point() {
     }
