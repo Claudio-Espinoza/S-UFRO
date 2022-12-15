@@ -12,7 +12,7 @@ class UserServiceTest {
     String name = "nameTest";
     User user= new User(name, "Snob", "Anemico", "Nerd", "Pretencioso", "Pantalon",
                "Formal", 0, 3, "images/avatarSelections/icons/type2.png");
-    @DisplayName("TEST 1(createCharacterIsEmpty): Comprobar que el metodo createCharacter no retorne null")
+    @DisplayName("TEST 1(createCharacterIsEmpty): Comprobar que el| metodo createCharacter no retorne null")
     @Test
     void createCharacterIsEmpty() {
     userPersonage = new HashMap<>();
