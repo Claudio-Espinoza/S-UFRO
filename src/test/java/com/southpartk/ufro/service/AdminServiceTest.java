@@ -71,10 +71,19 @@ class AdminServiceTest {
         assertEquals(redireccion,adminService.redirectionWithPassword(rut, password));
     }
 
-    /* No se como se veria eso
-    @Test
-    void findByAll() {
-        assertEquals(adminRepository.findAll(), adminService.findByAll());
+    @DisplayName("createAdminTest - Crear un admin")
+    @ParameterizedTest(name = "#{index} - rut: {0}")
+    @CsvSource({
+            "201025230,      1234566",
+            "201025230,      123456e",
+            "201025230,      12456",
+            "201025230,      1233456"
+    })
+    void createAdmin(String rut, String password) {
+        adminService.saveAdmin(adminService.createAdmin(rut,password));
+        assertTrue(adminService.existsById(rut));
     }
-     */
+
+
+
 }

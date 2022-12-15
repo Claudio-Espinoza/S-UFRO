@@ -46,4 +46,16 @@ public class AdminController {
         }
     }
 
+
+    @GetMapping("/createAdmin")
+    public String createAdmin(){return "admin/CreateAdmin";}
+
+    @PostMapping("/saveAdmin")
+    public String saveAdmin(String rut, String password){
+        adminService.saveAdmin(adminService.createAdmin(rut,password));
+        return "redirect:/";
+    }
+
+
+
 }

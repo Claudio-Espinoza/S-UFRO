@@ -1,5 +1,6 @@
 package com.southpartk.ufro.service;
 
+import com.southpartk.ufro.model.Admin;
 import com.southpartk.ufro.model.User;
 import com.southpartk.ufro.repository.AdminRepository;
 import com.southpartk.ufro.repository.UserRepository;
@@ -38,6 +39,14 @@ public class AdminService {
         }else{
             return "redirect:/credentials/LoginCredentialsAdmin";
         }
+    }
+
+    public Admin createAdmin(String rut, String password){
+        var adminNuevo = new Admin(rut, password);
+        return adminNuevo;
+    }
+    public void saveAdmin(Admin admin){
+        adminRepository.save(createAdmin(admin.getRut(), admin.getPassword()));
     }
 
     public Iterable<User> findByAll(){
